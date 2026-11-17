@@ -43,8 +43,8 @@ const symBody = (m, fill, pulse) => (pulse
   ? `<path d="${m.panels}" fill="${fill}"></path><path d="${m.pulse}" fill="${pulse}"></path>`
   : `<path d="${m.d}" fill="${fill}"></path>`);
 
-// Horizontal logo. capPx = cap height (and symbol height) in px. o.pulse draws the pulse in a colour
-// instead of cutting it out: use Ink on light grounds so the M stays visible.
+// Horizontal logo. capPx = cap height (and symbol height) in px. The pulse is always cut out, so the
+// ground shows through it. o.pulse can fill it with a colour instead; the brand does not use that.
 const lockup = (capPx, markFill, wordFill, o = {}) => {
   const k = capPx / CAP, w = o.w ?? LW * k, h = o.h ?? VH * k;
   const a11y = o.decor ? 'aria-hidden="true"' : 'role="img" aria-label="Megasolar"';
@@ -124,7 +124,7 @@ const page = ({ num, label, dark, body, foot }) => {
 <div style="width: 46px; height: 28px; border-radius: 6px; background: ${A}; transform: skewX(-18.4deg); display: flex; align-items: center; justify-content: center"><div style="transform: skewX(18.4deg); ${MONO}; font-size: 13px; font-weight: 500; color: ${INK}">${num}</div></div>
 <div style="${SX}; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase">${label}</div>
 </div>
-${lockup(18, A, fg, dark ? {} : { pulse: INK })}
+${lockup(18, A, fg)}
 </div>
 ${body}
 <div style="height: 16px; flex: none; display: flex; align-items: center; justify-content: space-between; ${MONO}; font-size: 11px; letter-spacing: 0.04em; color: ${sub}"><span>${foot || 'Megasolar brand guidelines'}</span><span>${num} / ${TOTAL}</span></div>
@@ -135,7 +135,7 @@ ${body}
 const sheet = ({ label, body, foot }) => `<div style="position: relative; overflow: hidden; width: 1600px; height: 1000px; box-sizing: border-box; padding: 52px 64px 44px; display: flex; flex-direction: column; gap: 32px; background: ${PAPER}; ${UI}; color: ${INK}">
 <div style="height: 40px; flex: none; display: flex; align-items: center; justify-content: space-between">
 <div style="${SX}; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase">${label}</div>
-${lockup(18, A, INK, { pulse: INK })}
+${lockup(18, A, INK)}
 </div>
 ${body}
 <div style="height: 16px; flex: none; display: flex; align-items: center; ${MONO}; font-size: 11px; letter-spacing: 0.04em; color: ${SLATE}">${foot || 'Megasolar · polish pass'}</div>

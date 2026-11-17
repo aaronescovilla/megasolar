@@ -13,7 +13,7 @@ const clear = `<div style="display: flex; flex-direction: column; align-items: c
 ${xMark}
 <div style="display: flex; align-items: center; gap: 6px">
 ${xMark}
-<div style="border: 1px dashed #8B949E; padding: ${CS}px; background: #EEF0EB"><div style="display: flex; background: ${WHITE}">${L.lockup(CS, A, INK, { pulse: INK })}</div></div>
+<div style="border: 1px dashed #8B949E; padding: ${CS}px; background: #EEF0EB"><div style="display: flex; background: ${WHITE}">${L.lockup(CS, A, INK)}</div></div>
 ${xMark}
 </div>
 ${xMark}
@@ -26,12 +26,12 @@ module.exports = () => L.doc({
     num: '02', label: 'Logo',
     body: `<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px">
 <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-${tile(WHITE, LINE, tag('Primary logo', SLATE) + L.lockup(44, A, INK, { pulse: INK }) + note('Solar Yellow panels, with the pulse and wordmark in Ink.', SLATE))}
+${tile(WHITE, LINE, tag('Primary logo', SLATE) + L.lockup(44, A, INK) + note('Solar Yellow symbol, Ink wordmark. Use on white and Paper.', SLATE))}
 ${tile(INK, INK, tag('Reversed', TEXT3_DARK) + L.lockup(44, A, WHITE) + note('Solar Yellow symbol, white wordmark. Use on Ink and dark photos.', TEXT2_DARK))}
 </div>
 <div style="flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
-${tile(WHITE, LINE, tag('Symbol', SLATE) + L.symbol(112, A, { pulse: INK }) + note('Two leaning panels and a pulse that draws an M.', SLATE))}
-${tile(WHITE, LINE, tag('Stacked', SLATE) + L.stackedLockup(236, A, INK, { pulse: INK }) + note('For square and narrow spaces.', SLATE))}
+${tile(WHITE, LINE, tag('Symbol', SLATE) + L.symbol(112, A) + note('Two leaning panels and a pulse that draws an M.', SLATE))}
+${tile(WHITE, LINE, tag('Stacked', SLATE) + L.stackedLockup(236, A, INK) + note('For square and narrow spaces.', SLATE))}
 ${tile(PAPER, LINE, tag('App icon · avatar · favicon', SLATE) + `<div style="display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 8px">
 <div style="display: flex; align-items: center; gap: 18px">
 <div style="width: 104px; height: 104px; border-radius: 24px; background: ${INK}; display: flex; align-items: center; justify-content: center">${L.symbol(46, A)}</div>
@@ -46,7 +46,7 @@ ${fav(16, 4, L.symbol(7, A, { small: true }))}
 ${tile(WHITE, LINE, tag('Clear space · minimum size', SLATE) + `<div style="display: flex; flex-direction: column; align-items: center; gap: 30px; padding-top: 14px">
 ${clear}
 <div style="display: flex; align-items: flex-end; gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 8px">${L.lockup(10, A, INK, { pulse: INK })}<div style="font-size: 12px; color: ${TEXT2}">Logo: letters 10 px tall</div></div>
+<div style="display: flex; flex-direction: column; gap: 8px">${L.lockup(10, A, INK)}<div style="font-size: 12px; color: ${TEXT2}">Logo: letters 10 px tall</div></div>
 <div style="display: flex; flex-direction: column; gap: 8px">${L.symbol(16, INK, { small: true })}<div style="font-size: 12px; color: ${TEXT2}">Symbol: 16 px</div></div>
 </div>
 </div>`)}

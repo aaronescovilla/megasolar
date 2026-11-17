@@ -29,8 +29,8 @@ ${column('Before',
     L.oldLockup(52, A, INK), L.oldLockup(52, A, WHITE), L.oldSymbol(124, A),
     sizes((h) => L.oldSymbol(h, INK)), L.oldSymbol(60, A), dot('#C9CED4'))}
 ${column('After',
-    L.lockup(40, A, INK, { pulse: INK }), L.lockup(40, A, WHITE), L.symbol(124, A),
-    sizes((h) => L.symbol(h, INK, { small: h <= 24 })), L.symbol(60, A, { pulse: INK }), dot(A))}
+    L.lockup(40, A, INK), L.lockup(40, A, WHITE), L.symbol(124, A),
+    sizes((h) => L.symbol(h, INK, { small: h <= 24 })), L.symbol(60, A), dot(A))}
 </div>`
   })
 });

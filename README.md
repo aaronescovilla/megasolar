@@ -4,7 +4,7 @@ Brand identity for Megasolar: the logo, the design exploration that led to it, a
 
 The logo is two leaning panels cut by a pulse that draws an M, with the wordmark MEGASOLAR set in Saira SemiBold Expanded, converted to outlines and spaced pair by pair. Colours are Ink `#0C1014` and Solar Yellow `#FFD12E`.
 
-There are two versions. `brand/logo/` is the first approved logo ("42 Tuned"). `brand/logo-v2/` is the polished redraw proposed after it: a bolder pulse on a ten-module grid, clean joins, an Ink pulse on light grounds, re-spaced letters, and the symbol aligned to the letter height.
+There are two versions. `brand/logo/` is the first approved logo ("42 Tuned"). `brand/logo-v2/` is the polished redraw proposed after it: a bolder pulse on a ten-module grid, clean joins, re-spaced letters, and the symbol aligned to the letter height.
 
 ## What is here
 

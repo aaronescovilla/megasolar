@@ -62,7 +62,7 @@ ${L.lockup(17, A, WHITE)}
 
 <div style="height: 384px; flex: none; box-sizing: border-box; border-radius: 20px; background: ${WHITE}; border: 1px solid ${LINE}; overflow: hidden; display: flex; color: ${INK}">
 <div style="width: 196px; flex: none; box-sizing: border-box; padding: 20px 14px; background: ${PAPER}; border-right: 1px solid ${MIST}; display: flex; flex-direction: column; gap: 4px">
-<div style="padding: 4px 2px 16px">${L.lockup(13, A, INK, { pulse: INK })}</div>
+<div style="padding: 4px 2px 16px">${L.lockup(13, A, INK)}</div>
 ${side('Overview', true)}
 ${side('Sites')}
 ${side('Alerts')}

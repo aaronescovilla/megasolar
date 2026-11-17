@@ -26,19 +26,19 @@ module.exports = () => L.doc({
     body: `<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px">
 ${L.cap('Colorways', SLATE)}
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
-${way(WHITE, LINE, L.lockup(25, A, INK, { pulse: INK }), 'Primary', 'On white and Paper. The pulse is drawn in Ink so the M stays visible.')}
+${way(WHITE, LINE, L.lockup(25, A, INK), 'Primary', 'On white and Paper. Use this first.')}
 ${way(INK, INK, L.lockup(25, A, WHITE), 'Reversed', 'On Ink and dark photos. The home of the brand.')}
 ${way(A, A, L.lockup(25, INK, INK), 'One color, Ink', 'On Solar Yellow, and for one-color print.')}
 ${way('#3A424B', '#3A424B', L.lockup(25, WHITE, WHITE), 'One color, white', 'On mid-tone color and busy photos.')}
 </div>
 ${L.cap('Don’t', SLATE, 'margin-top: 18px')}
 <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px">
-${dont(L.lockup(M, A, INK, { w: M * L.LOCK_RATIO, h: 38, stretch: true, decor: true, pulse: INK }), 'Don’t stretch or squeeze it.')}
-${dont(L.lockup(M, '#2A78D6', '#7A3FB5', { decor: true, pulse: '#7A3FB5' }), 'Don’t change the colors.')}
-${dont(L.lockup(M, A, INK, { decor: true, pulse: INK, style: 'transform: rotate(-12deg)' }), 'Don’t rotate it.')}
+${dont(L.lockup(M, A, INK, { w: M * L.LOCK_RATIO, h: 38, stretch: true, decor: true }), 'Don’t stretch or squeeze it.')}
+${dont(L.lockup(M, '#2A78D6', '#7A3FB5', { decor: true }), 'Don’t change the colors.')}
+${dont(L.lockup(M, A, INK, { decor: true, style: 'transform: rotate(-12deg)' }), 'Don’t rotate it.')}
 ${dont(L.lockup(M, null, null, { decor: true, outline: INK, sw: 56 }), 'Don’t outline it.')}
 ${dont(L.lockup(M, WHITE, WHITE, { decor: true }), 'Don’t put white on Solar Yellow.', A)}
-${dont(L.lockupSwapped(M, A, INK, INK), 'Don’t rearrange the parts.')}
+${dont(L.lockupSwapped(M, A, INK), 'Don’t rearrange the parts.')}
 </div>
 <div style="margin-top: auto; padding-top: 18px; border-top: 1px solid ${LINE}; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
 ${rule('Clear space', 'Keep one symbol height clear on every side.')}

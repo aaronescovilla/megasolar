@@ -38,7 +38,7 @@ ${at(420, A, 250, 40)}
 
 <div style="position: relative; overflow: hidden; border-radius: 20px; background: ${MIST}">
 <div style="position: absolute; left: 30px; top: 28px; width: 300px; height: 172px; box-sizing: border-box; border-radius: 10px; background: ${WHITE}; padding: 20px 24px 34px; display: flex; flex-direction: column; justify-content: space-between; color: ${INK}; ${SHADOW}">
-${L.symbol(20, A, { pulse: INK })}
+${L.symbol(20, A)}
 <div style="display: flex; flex-direction: column; gap: 2px">
 <div style="font-size: 16px; font-weight: 600">[Full name]</div>
 <div style="font-size: 13px; color: ${SLATE}">[Role]</div>
@@ -53,7 +53,7 @@ ${at(300, '#161C23', 96, -40)}
 
 <div style="border-radius: 20px; background: ${MIST}; display: flex; align-items: center; justify-content: center">
 <div style="position: relative; overflow: hidden; width: 238px; height: 336px; box-sizing: border-box; background: ${WHITE}; padding: 22px 20px; display: flex; flex-direction: column; gap: 44px; color: ${INK}; ${SHADOW}">
-${L.lockup(10, A, INK, { pulse: INK })}
+${L.lockup(10, A, INK)}
 <div style="display: flex; flex-direction: column; gap: 12px">
 <div style="${SX}; font-size: 22px; line-height: 26px; letter-spacing: -0.01em">Monthly<br>performance<br>report</div>
 <div style="${MONO}; font-size: 10px; color: ${SLATE}">[Client name] · [Month Year]</div>

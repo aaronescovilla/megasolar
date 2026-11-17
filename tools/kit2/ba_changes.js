@@ -49,9 +49,9 @@ module.exports = () => L.doc({
 ${card(1, 'A bolder pulse', 'The line through the panels is now one tenth of the height, up from 7%. It holds at favicon size.', pair(L.oldSymbol(96, INK), L.symbol(96, INK)))}
 ${card(2, 'Clean joins', 'The hooks and thin slivers where the line met the panel edges are gone. Every join is a true arc.', pair(at(L.oldSymbol(260, INK), 10, -49), at(L.symbol(260, INK), 10, -49)))}
 ${card(3, 'One module', 'The gap, the pulse and the corner radius are each one tenth of the height. Every edge leans 1 in 3.', `<div style="flex: 1; min-height: 0; display: flex">${box(grid)}</div>`)}
-${card(4, 'Visible on white', 'On light grounds the pulse is drawn in Ink. Before, a white line on yellow almost disappeared.', pair(L.oldSymbol(96, A), L.symbol(96, A, { pulse: INK }), WHITE))}
+${card(4, 'Clearer on white', 'The thicker pulse reads more clearly as a white line on Solar Yellow, most of all at small sizes.', pair(L.oldSymbol(96, A), L.symbol(96, A), WHITE))}
 ${card(5, 'Even letter spacing', 'Each pair was re-spaced by eye. E–G, A–S and L–A open up; M–E and O–L close in.', rows(L.oldWordmark(37, INK), L.wordmark(37, INK)))}
-${card(6, 'A tighter logo', 'The symbol is now exactly as tall as the letters and sits on their baseline, with one fixed gap.', rows(guided(L.oldLockup(OW, A, INK), oldCap, oldBase), guided(L.lockup(NC, A, INK, { pulse: INK }), 8 * k, 696 * k), WHITE))}
+${card(6, 'A tighter logo', 'The symbol is now exactly as tall as the letters and sits on their baseline, with one fixed gap.', rows(guided(L.oldLockup(OW, A, INK), oldCap, oldBase), guided(L.lockup(NC, A, INK), 8 * k, 696 * k), WHITE))}
 </div>`
   })
 });
