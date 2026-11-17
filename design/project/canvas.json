@@ -315,7 +315,7 @@
     },
     "DocAgreement1.dc.html": {
       "h": 1123,
-      "title": "Project Foreman Agreement · page 1",
+      "title": "Installation Contractor Agreement · page 1",
       "w": 794,
       "x": 1908,
       "y": 1420,
@@ -323,7 +323,7 @@
     },
     "DocAgreement2.dc.html": {
       "h": 1123,
-      "title": "Project Foreman Agreement · page 2",
+      "title": "Installation Contractor Agreement · page 2",
       "w": 794,
       "x": 2782,
       "y": 1420,
@@ -331,7 +331,7 @@
     },
     "DocAgreement3.dc.html": {
       "h": 1123,
-      "title": "Project Foreman Agreement · page 3",
+      "title": "Installation Contractor Agreement · page 3",
       "w": 794,
       "x": 3656,
       "y": 1420,
@@ -494,7 +494,7 @@
     "d2": {
       "kind": "title1",
       "maxW": 2542,
-      "text": "Project Foreman Agreement",
+      "text": "Installation Contractor Agreement",
       "x": 1908,
       "y": 1120,
       "w": 240,

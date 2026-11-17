@@ -26,7 +26,7 @@ The chosen kit is saved as a design system at https://claude.ai/artifact/VYddBFu
 The boards in `design/project/` are Claude Design canvas files. They load a runtime from the canvas, so they do not open on their own in a browser. View and edit them at
 https://claude.ai/artifact/6Tt1jZVv3MZ5KYq4h1UqVa (private to the owner unless shared).
 
-The canvas has three pages. "Documents · draft" holds the proposed document standard, drafted on 17 November 2026 and not yet approved: the rules sheet (`DocStandard`), the letterhead (`DocLetter1`, `DocLetter2`), the Project Foreman Agreement set whole on three pages (`DocAgreement1` to `DocAgreement3`) and the form format, shown on the Project Order (`DocForm`). All pages are A4.
+The canvas has three pages. "Documents · draft" holds the proposed document standard, drafted on 17 November 2026 and not yet approved: the rules sheet (`DocStandard`), the letterhead (`DocLetter1`, `DocLetter2`), the Installation Contractor Agreement set whole on three pages (`DocAgreement1` to `DocAgreement3`) and the form format, shown on the Project Order (`DocForm`). All pages are A4.
 
 "Final kit · before and after" holds the chosen kit beside the boards it replaced:
 

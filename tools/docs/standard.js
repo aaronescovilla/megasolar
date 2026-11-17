@@ -40,11 +40,11 @@ ${spec('Text starts', '39 mm from top')}
 ${spec('Foot', '13 mm from bottom')}
 </div>`, 300)}
 ${column('Type', `<div style="display: flex; flex-direction: column; border-bottom: 1px solid ${LINE}">
-${typeRow('Document title', 'Saira Expanded SemiBold, 18 pt', `<div style="${SX}; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Project Foreman Agreement</div>`)}
-${typeRow('Section heading', 'Geist SemiBold, 12 pt', `<div style="font-size: 16px; line-height: 22px; font-weight: 600">2. &nbsp; Pay</div>`)}
+${typeRow('Document title', 'Saira Expanded SemiBold, 18 pt', `<div style="${SX}; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Contractor Agreement</div>`)}
+${typeRow('Section heading', 'Geist SemiBold, 12 pt', `<div style="font-size: 16px; line-height: 22px; font-weight: 600">2. &nbsp; Payment</div>`)}
 ${typeRow('Text', 'Geist Regular, 11 on 16 pt', `<div style="${P.BODY}">The Company installs solar power systems one project at a time.</div>`)}
-${typeRow('Clause', 'Number hangs 40 px left of the text', `<div style="${P.BODY}">2.2 &nbsp;&nbsp; A project is completed when the client signs the turnover form.</div>`)}
-${typeRow('Tables', 'Geist, 10 pt, tabular numerals', `<div style="font-size: 13.33px; line-height: 19px; ${P.NUM}">Daily rate &nbsp; ₱[amount] &nbsp; 15th and last day</div>`)}
+${typeRow('Clause', 'Number hangs 40 px left of the text', `<div style="${P.BODY}">2.2 &nbsp;&nbsp; A job is completed when the client signs the turnover form.</div>`)}
+${typeRow('Tables', 'Geist, 10 pt, tabular numerals', `<div style="font-size: 13.33px; line-height: 19px; ${P.NUM}">Base &nbsp; ₱3.00 for each watt installed</div>`)}
 ${typeRow('Reference and foot', 'Geist Regular, 9 pt', `<div style="${P.SMALL}; ${P.NUM}">${REF} &nbsp; Page 2 of 3</div>`)}
 </div>
 <div style="font-size: 14px; line-height: 21px; color: ${TEXT2}; text-wrap: pretty">All text is Ink on white. Geist carries everything except the title. Nothing is set in capitals, in a code face or in colour.</div>`)}
@@ -62,7 +62,7 @@ ${part('LTR', 'Letter')}${part('AGR', 'Agreement')}
 ${part('MEM', 'Memo')}${part('FRM', 'Form')}
 ${part('QUO', 'Quotation')}${part('RPT', 'Report')}
 </div>
-${note('File name', `<span style="${P.NUM}">${REF}_project-foreman-agreement_v0.1.pdf</span>`)}
+${note('File name', `<span style="${P.NUM}">${REF}_installation-contractor-agreement_v0.3.pdf</span>`)}
 ${note('Status and version', 'A first page shows Draft, For signing or Signed under the reference. Versions run 0.1, 0.2 while in draft and become 1.0 when signed.')}`, 400)}
 </div>
 <div style="padding-top: 22px; border-top: 1px solid ${INK}; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px">
