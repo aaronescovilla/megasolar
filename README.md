@@ -13,9 +13,9 @@ The logo is two leaning panels cut by a pulse that draws an M, with the wordmark
 | `brand/logo/` | The chosen logo. SVG masters for the horizontal, stacked, reversed and one-colour logos, the symbol, the wordmark, the app icon and avatar, plus `favicon.ico`. PNG exports are in `brand/logo/png/`. |
 | `brand/archive/logo-v1/` | The earlier logo, with the same kind of files. Do not use it for new work. |
 | `design-system/` | Source of the Megasolar design system saved on claude.ai: the usage rules (`project/README.md`), tokens, fonts and cover. The logo files it shows are uploads of `brand/logo/`. |
-| `design/project/` | Source of the design canvas: 39 boards (`*.dc.html`) and their layout (`canvas.json`). |
+| `design/project/` | Source of the design canvas: 46 boards (`*.dc.html`) and their layout (`canvas.json`). |
 | `CLAUDE.md` | A short record of the chosen brand that every Claude thread on this repository reads automatically. |
-| `tools/` | Scripts that draw the symbol, outline the Saira wordmark, export the logo files and generate 16 of the boards. `tools/kit2/` builds the chosen brand kit and the before-and-after boards. |
+| `tools/` | Scripts that draw the symbol, outline the Saira wordmark, export the logo files and generate 23 of the boards. `tools/kit2/` builds the chosen brand kit and the before-and-after boards. `tools/docs/` builds the document standard boards. |
 
 ## The design system
 
@@ -26,7 +26,9 @@ The chosen kit is saved as a design system at https://claude.ai/artifact/VYddBFu
 The boards in `design/project/` are Claude Design canvas files. They load a runtime from the canvas, so they do not open on their own in a browser. View and edit them at
 https://claude.ai/artifact/6Tt1jZVv3MZ5KYq4h1UqVa (private to the owner unless shared).
 
-The canvas has two pages. "Final kit · before and after" holds the chosen kit beside the boards it replaced:
+The canvas has three pages. "Documents · draft" holds the proposed document standard, drafted on 17 November 2026 and not yet approved: the rules sheet (`DocStandard`), the letterhead (`DocLetter1`, `DocLetter2`), the agreement format (`DocAgreement1` to `DocAgreement3`) and the form format (`DocForm`). All pages are A4.
+
+"Final kit · before and after" holds the chosen kit beside the boards it replaced:
 
 | Row | Boards |
 |---|---|
@@ -78,6 +80,7 @@ node tools/saira_gen.js             # SairaRefinements, SairaSuite
 node tools/kit_gen.js               # KitColor, KitType, KitApplications
 node tools/tesla_gen.js             # WordmarksTesla
 node tools/kit2/build.js            # the eight Kit2 boards and the two BeforeAfter boards
+node tools/docs/build.js            # the seven Doc boards (document standard, draft)
 ```
 
 Each generator takes an optional output folder, for example `node tools/kit_gen.js /tmp/out/`, to build without overwriting. The `*_t.js` scripts and `tools/kit2/check.js` run a board's logic with different tweak settings and report missing values.

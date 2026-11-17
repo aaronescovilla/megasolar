@@ -4,7 +4,7 @@ const fs = require('fs');
 const dir = process.argv[2] || 'design/project/';
 const get = (p, c) => p.split('.').reduce((o, k) => (o == null ? undefined : o[k]), c);
 let bad = 0;
-for (const file of fs.readdirSync(dir).filter((f) => /^(Kit2|BeforeAfter).*\.dc\.html$/.test(f))) {
+for (const file of fs.readdirSync(dir).filter((f) => /^(Kit2|BeforeAfter|Doc).*\.dc\.html$/.test(f))) {
   const src = fs.readFileSync(dir + file, 'utf8');
   const js = src.match(/<script type="text\/x-dc"[^>]*>([\s\S]*?)<\/script>/)[1];
   const props = JSON.parse(src.match(/data-props='([^']*)'/)[1]);
