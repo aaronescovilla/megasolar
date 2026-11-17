@@ -14,7 +14,7 @@ const first = () => P.doc({
         P.para('Dear [Name],'),
         `<div style="${P.BODY}; font-weight: 600">[Subject of the letter]</div>`,
         P.para('This sheet shows how a Megasolar letter is set. It prints on A4 with 25 mm side margins. The logo sits at the top left of the first sheet, the reference at the top right, and the company details at the foot.'),
-        P.para('The text is Geist Regular at 11 point on 16 point lines, ranged left and never justified. Paragraphs are separated by a line of space and are not indented. Nothing on the page is in colour except the logo.'),
+        P.para('The text is Geist Regular at 10.5 point on 15 point lines, ranged left and never justified. Paragraphs are separated by a line of space and are not indented. Nothing on the page is in colour except the logo.'),
         P.para('Write the way the brand speaks: plainly and specifically, in sentence case, with no exclamation marks. Say what happened, then what the reader should do about it. Put dates in full, as in 17 November 2026, so they cannot be misread.'),
         P.para('The reference identifies the letter. Quote it in a reply, and use it in the file name so the letter can be found again.'),
         P.para('A letter that runs past one sheet continues on a continuation sheet. That sheet carries the symbol in place of the full logo, repeats the reference, and shows the page number at the foot.')

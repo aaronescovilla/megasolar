@@ -10,41 +10,43 @@ const B = (t) => `<span style="font-weight: 600">${t}</span>`;
 const C = P.clause;
 
 const BLANK = {
-  status: 'Draft, version 0.4',
-  date: '[date]',
-  city: '[city]',
-  companyParty: `${B('[Registered business name]')}, doing business as ${B('Megasolar')}, of [address] (the "Company")`,
-  contractorName: '[Contractor\'s full name]',
-  contractorAddress: '[address]',
+  status: 'Draft, version 0.5',
+  // In these three, **double asterisks** mark the name to set in SemiBold.
+  companyDetail: '**[Registered business name]**, doing business as Megasolar, [address]. Represented by [name], [position].',
+  contractorDetail: '**[Contractor\'s full name]**, [address]',
+  dateDetail: '[date], at [city], Philippines',
   training: 'attend [course name] run by [training provider] from [start date] to [end date]',
-  callbackDays: '[30]', bonusDays: '[30]', commitMonths: '[18]', noJobDays: '[60]', tempDays: '[30]', afterMonths: '[12]',
+  callbackDays: '[30]', bonusDays: '[30]', commitMonths: '[24]', noJobDays: '[60]', tempDays: '[30]', afterMonths: '[12]',
   territory: '[cities or provinces the Company serves]',
   penalty: '₱[amount]',
   language: '[language]',
   signCompany: ['[Owner\'s name]', '[Position], [Registered business name]', 'Date:'],
   signContractor: ['[Contractor\'s full name]', 'Date:'],
   // Which block opens page 2 and page 3. Placed by measuring the rendered blocks: re-measure after changing text.
-  breaks: [10, 21]
+  breaks: [9, 20]
 };
+const bold = (t) => t.replace(/\*\*(.+?)\*\*/g, (m, x) => B(x));
 
 const make = (values = {}) => {
   const v = Object.assign({}, BLANK, values);
   // Every block of the agreement in order.
   const blocks = [
-    P.para(`This Agreement is made on ${v.date} at ${v.city}, Philippines, between ${v.companyParty}, and ${B(v.contractorName)}, of ${v.contractorAddress} (the "Contractor").`),
+    P.details([['Company', bold(v.companyDetail)], ['Contractor', bold(v.contractorDetail)], ['Date', v.dateDetail]]),
     P.h2('1.', 'The work'),
-    C('1.1', '', 'The Company engages the Contractor to install solar power systems for its clients, job by job. He works as an independent contractor with his own crew. Neither he nor his crew is the Company\'s employee.'),
+    C('1.1', '', 'The Company named above engages the Contractor named above to install solar power systems for its clients, job by job. He works as an independent contractor with his own crew. Neither he nor his crew is the Company\'s employee.'),
     C('1.2', '', 'Each job is given to him in a signed Project Order that states the site, the system to be installed, the start date, the agreed finish date and the amount payable. The Company does not promise a minimum number of jobs.'),
     C('1.3', '', 'The Company supplies the equipment, the materials, the tools, the design and the permits. The Contractor supplies the crew.'),
     C('1.4', '', 'He installs to the Company\'s plans and the manufacturers\' instructions. He does not change the design, agree extra work or a price with a client, or accept money from a client. The Company\'s licensed electrician or engineer makes or checks the final electrical connections before a system is switched on.'),
     P.h2('2.', 'Payment'),
-    P.carried(P.table('64px minmax(0, 1fr) 200px', ['Payment', 'Amount', 'When it is paid'], [
+    P.carried(P.table('84px minmax(0, 1fr) 190px', ['Payment', 'Amount', 'When it is paid'], [
       ['Base', '₱3.00 for each watt of solar panels installed', 'As scheduled in each Project Order, or else in full within 7 days after the job is completed'],
-      ['Bonus', '₱0.50 for each watt installed, if the job is finished by the agreed date and needs no callback', `${v.bonusDays} days after the job is completed`]
+      ['Bonus', '₱0.50 for each watt installed, if the job is finished by the agreed date and needs no callback', `${v.bonusDays} days after the job is completed`],
+      ['Civil works', 'Half of what the client pays for them, after the cost of materials and outside services', 'With the base']
     ])),
     C('2.1', '', 'Watts installed means the number of panels installed multiplied by the rated watts of each panel. For example, 14 panels of 620 watts are 8,680 watts, so the base is ₱26,040 and the bonus is ₱4,340.'),
     C('2.2', '', `A job is completed when the system has been tested and the client has signed the turnover form. The agreed finish date moves for delays caused by weather, the client or late materials. A callback is a return visit within ${v.callbackDays} days after completion to correct the crew's work. The Contractor makes that visit at no charge.`),
-    C('2.3', '', 'These amounts are the whole price for a job. Out of them the Contractor pays his crew\'s wages, meals and transport, and his own taxes. He signs a receipt for each payment, and the Company may withhold any tax the law requires.'),
+    C('2.3', '', 'Civil works are work outside the installation itself, such as concrete, steel or roof repair, ordered in a Project Order. The Company prices them with the client and supplies the materials.'),
+    C('2.4', '', 'These amounts are the whole price for a job. Out of them the Contractor pays his crew\'s wages, meals and transport, and his own taxes. He signs a receipt for each payment, and the Company may withhold any tax the law requires.'),
     P.h2('3.', 'The crew, safety and damage'),
     C('3.1', '', 'The crew are the Contractor\'s own workers. He chooses, directs and pays them, at no less than the legal minimum wage and with the benefits the law requires. If he fails to pay a worker for a Company job, the Company may pay that worker directly and deduct the amount from what it owes him.'),
     C('3.2', '', 'The Contractor and his crew follow safety law and the Company\'s safety rules, and he stops any work that is unsafe. The Company provides protective equipment and accident insurance for the crew on its jobs.'),
@@ -62,17 +64,17 @@ const make = (values = {}) => {
     C('6.1', '', 'Either party may end this Agreement by giving 30 days\' written notice. Jobs already started are finished and paid for. Clause 4 still applies.'),
     C('6.2', '', 'The Company may end it at once for a serious breach, such as theft, taking clients or side payments, falsified reports, an unpaid crew or a serious safety violation. It first gives him written notice of the breach and a chance to answer.'),
     P.h2('7.', 'General'),
-    C('7.1', '', 'This Agreement and the signed Project Orders are the whole agreement between the parties. Any change must be in writing and signed by both. Philippine law governs this Agreement.'),
+    C('7.1', '', 'This Agreement and the signed Project Orders are the whole agreement. Changes must be in writing and signed by both parties. Philippine law governs.'),
     C('7.2', '', `The Contractor confirms that this Agreement was explained to him in ${v.language}, that he understood it, and that he signs it freely.`)
   ];
   const signatures = `<div style="padding-top: 6px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; row-gap: 20px">
-${P.signature('The Company', v.signCompany, { space: 42 })}
-${P.signature('The Contractor', v.signContractor, { space: 42 })}
-${P.signature('Witness', ['Name:'], { space: 34 })}
-${P.signature('Witness', ['Name:'], { space: 34 })}
+${P.signature('The Company', v.signCompany, { space: 38 })}
+${P.signature('The Contractor', v.signContractor, { space: 38 })}
+${P.signature('Witness', ['Name:'], { space: 30 })}
+${P.signature('Witness', ['Name:'], { space: 30 })}
 </div>`;
   // A section heading that opens a page drops the space it would otherwise keep above it.
-  const top = (list) => [list[0].replace('<h2 style="margin: 0; padding-top: 10px;', '<h2 style="margin: 0; padding-top: 0px;'), ...list.slice(1)];
+  const top = (list) => [list[0].replace('<h2 style="margin: 0; padding-top: 12px;', '<h2 style="margin: 0; padding-top: 0px;'), ...list.slice(1)];
   const [b1, b2] = v.breaks;
 
   const first = () => P.doc({
@@ -81,16 +83,16 @@ ${P.signature('Witness', ['Name:'], { space: 34 })}
       head: P.headFirst(REF, v.status),
       foot: foot(1),
       gapTop: 46,
-      body: P.stack([P.title(NAME), P.stack(blocks.slice(0, b1), 8)], 22)
+      body: P.stack([P.title(NAME), P.stack(blocks.slice(0, b1), 8)], 16)
     })
   });
   const second = () => P.doc({
     title: 'Megasolar · Installation Contractor Agreement, page 2',
-    body: P.sheet({ gapTop: 44, head: P.headNext(REF), foot: foot(2), body: P.stack(top(blocks.slice(b1, b2)), 8) })
+    body: P.sheet({ gapTop: 40, head: P.headNext(REF), foot: foot(2), body: P.stack(top(blocks.slice(b1, b2)), 8) })
   });
   const third = () => P.doc({
     title: 'Megasolar · Installation Contractor Agreement, page 3',
-    body: P.sheet({ gapTop: 44, head: P.headNext(REF), foot: foot(3), body: P.stack([P.stack(top(blocks.slice(b2)), 8), signatures], 22) })
+    body: P.sheet({ gapTop: 40, head: P.headNext(REF), foot: foot(3), body: P.stack([P.stack(top(blocks.slice(b2)), 8), signatures], 18) })
   });
   // True while any [bracketed] blank is left in the text.
   const blanks = /\[[^\]]+\]/.test(blocks.join('') + signatures);

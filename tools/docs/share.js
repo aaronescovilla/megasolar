@@ -9,7 +9,6 @@ const L = require('../kit2/lib.js');
 
 const valuesPath = process.argv[2];
 const values = valuesPath ? JSON.parse(fs.readFileSync(valuesPath, 'utf8')) : {};
-if (values.companyPartyBold) values.companyParty = values.companyParty.replace(values.companyPartyBold, make.B(values.companyPartyBold));
 const agreement = make(values);
 
 const sheets = [agreement.first, agreement.second, agreement.third].map((page) => {
