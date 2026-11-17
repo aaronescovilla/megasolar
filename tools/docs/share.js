@@ -11,13 +11,13 @@ const valuesPath = process.argv[2];
 const values = valuesPath ? JSON.parse(fs.readFileSync(valuesPath, 'utf8')) : {};
 const agreement = make(values);
 
-const sheets = [agreement.first, agreement.second, agreement.third].map((page) => {
+const sheets = agreement.pages.map((page) => {
   const src = page();
   return src.slice(src.indexOf('</helmet>') + 9, src.indexOf('</x-dc>')).replace(/\{\{accent\}\}/g, L.SOLAR).trim();
 });
 const note = agreement.blanks
   ? 'Draft for review. Text in [square brackets] is still to be filled in.'
-  : 'Print on A4, one side only. Both parties initial each page and sign the last.';
+  : 'Print on A4, one side only. Both parties initial each page and sign the last before a notary.';
 
 const html = `<title>Installation Contractor Agreement</title>
 <meta name="claude:viewport-fit-sides" content="cover">

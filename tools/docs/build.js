@@ -8,9 +8,10 @@ const boards = {
   DocStandard: require('./standard.js'),
   DocLetter1: letter.first,
   DocLetter2: letter.next,
-  DocAgreement1: agreement.first,
-  DocAgreement2: agreement.second,
-  DocAgreement3: agreement.third,
+  DocAgreement1: agreement.pages[0],
+  DocAgreement2: agreement.pages[1],
+  DocAgreement3: agreement.pages[2],
+  DocAgreement4: agreement.pages[3],
   DocForm: require('./form.js')
 };
 fs.mkdirSync(out, { recursive: true });

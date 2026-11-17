@@ -341,7 +341,15 @@
       "h": 1123,
       "title": "Form · project order",
       "w": 794,
-      "x": 4690,
+      "x": 5564,
+      "y": 1420,
+      "page": "documents"
+    },
+    "DocAgreement4.dc.html": {
+      "h": 1123,
+      "title": "Installation Contractor Agreement · page 4",
+      "w": 794,
+      "x": 4530,
       "y": 1420,
       "page": "documents"
     }
@@ -493,7 +501,7 @@
     },
     "d2": {
       "kind": "title1",
-      "maxW": 2542,
+      "maxW": 3416,
       "text": "Installation Contractor Agreement",
       "x": 1908,
       "y": 1120,
@@ -547,6 +555,7 @@
     "DocAgreement1.dc.html",
     "DocAgreement2.dc.html",
     "DocAgreement3.dc.html",
+    "DocAgreement4.dc.html",
     "DocForm.dc.html"
   ],
   "pages": [
