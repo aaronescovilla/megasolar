@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar · Tesla-esque wordmarks</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1600px; height: 1820px; box-sizing: border-box; padding: 16px; display: flex; flex-direction: column; gap: 16px; background: #E6E8E3; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0C1014">
+<div style="position: relative; flex: none; height: 400px; border-radius: 20px; background: #0C1014; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; padding: 28px 36px">
+<div style="flex: 1; display: flex; align-items: center">
+<svg width="{{hero.nav.w}}" height="{{hero.nav.h}}" viewBox="{{hero.nav.vb}}" aria-hidden="true"><g transform="{{hero.nav.mt}}" fill="{{accent}}"><path d="{{mark.p1}}"></path><path d="{{mark.p2}}"></path><path d="{{mark.p3}}"></path><path d="{{mark.p4}}"></path></g><g transform="{{hero.nav.wt}}"><path d="{{hero.ds}}" fill="none" stroke="#FFFFFF" stroke-width="{{hero.t}}" stroke-linecap="{{hero.cap}}" stroke-linejoin="{{hero.join}}"></path><path d="{{hero.df}}" fill="#FFFFFF"></path></g></svg>
+</div>
+<div style="display: flex; gap: 36px; font-size: 14px; font-weight: 500; color: #C9CED4">
+<span>Platform</span><span>Solar</span><span>Storage</span><span>Pricing</span>
+</div>
+<div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 22px; font-size: 14px; font-weight: 500">
+<span style="color: #C9CED4">Sign in</span>
+<span style="padding: 10px 18px; border-radius: 999px; background: {{accent}}; color: #0C1014">Book a demo</span>
+</div>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-bottom: 44px">
+<div style="font-size: 64px; font-weight: 600; letter-spacing: -0.035em; line-height: 1.05">Solar, run like software.</div>
+<div style="font-size: 19px; color: #9AA3AD; margin-top: 18px">Monitoring, billing and O&amp;M for commercial solar fleets.</div>
+<div style="display: flex; gap: 12px; margin-top: 30px; font-size: 15px; font-weight: 500">
+<span style="padding: 12px 22px; border-radius: 999px; background: #FFFFFF; color: #0C1014">Book a demo</span>
+<span style="padding: 11px 21px; border-radius: 999px; border: 1px solid #3A424B; color: #FFFFFF">See the platform</span>
+</div>
+</div>
+<div style="position: absolute; left: 36px; bottom: 22px; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #5B6570">Header wordmark: {{hero.label}}</div>
+</div>
+<div style="flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="8">
+<div style="position: relative; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; min-width: 0; min-height: 0">
+<div style="position: absolute; top: 16px; left: 18px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #5B6570">{{o.n}}</div>
+<div style="flex: 1; display: flex; align-items: center; justify-content: center; padding-top: 12px">
+<svg width="{{o.wm.w}}" height="{{o.wm.h}}" viewBox="{{o.wm.vb}}" aria-hidden="true"><g transform="{{o.wm.wt}}"><path d="{{o.ds}}" fill="none" stroke="#0C1014" stroke-width="{{o.t}}" stroke-linecap="{{o.cap}}" stroke-linejoin="{{o.join}}"></path><path d="{{o.df}}" fill="#0C1014"></path></g></svg>
+</div>
+<div style="display: flex; gap: 12px; margin: 0 16px">
+<div style="flex: 1; height: 88px; border-radius: 14px; background: #0C1014; display: flex; align-items: center; justify-content: center">
+<svg width="{{o.lk.w}}" height="{{o.lk.h}}" viewBox="{{o.lk.vb}}" aria-hidden="true"><g transform="{{o.lk.mt}}" fill="{{o.accent}}"><path d="{{o.p1}}"></path><path d="{{o.p2}}"></path><path d="{{o.p3}}"></path><path d="{{o.p4}}"></path></g><g transform="{{o.lk.wt}}"><path d="{{o.ds}}" fill="none" stroke="#FFFFFF" stroke-width="{{o.t}}" stroke-linecap="{{o.cap}}" stroke-linejoin="{{o.join}}"></path><path d="{{o.df}}" fill="#FFFFFF"></path></g></svg>
+</div>
+<div style="flex: 1; height: 88px; border-radius: 14px; background: {{o.accent}}; display: flex; align-items: center; justify-content: center">
+<svg width="{{o.lk.w}}" height="{{o.lk.h}}" viewBox="{{o.lk.vb}}" aria-hidden="true"><g transform="{{o.lk.mt}}" fill="#0C1014"><path d="{{o.p1}}"></path><path d="{{o.p2}}"></path><path d="{{o.p3}}"></path><path d="{{o.p4}}"></path></g><g transform="{{o.lk.wt}}"><path d="{{o.ds}}" fill="none" stroke="#0C1014" stroke-width="{{o.t}}" stroke-linecap="{{o.cap}}" stroke-linejoin="{{o.join}}"></path><path d="{{o.df}}" fill="#0C1014"></path></g></svg>
+</div>
+</div>
+<div style="padding: 12px 22px 16px; display: flex; align-items: baseline; gap: 12px; min-width: 0">
+<div style="flex: none; font-size: 16px; font-weight: 600">{{o.name}}</div>
+<div style="min-width: 0; font-size: 13px; color: #5B6570; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{o.desc}}</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFD12E","options":["#FFD12E","#EDBD1E","#3BE083","#C4F24A"]},"hero":{"editor":"enum","default":"33 Split","options":["33 Split","34 Hairline","35 Heavy","36 Closed","37 Square","38 Rounded","39 Slanted","40 Panel A"]},"$preview":{"width":1600,"height":1820}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#FFD12E';
+    const R = 663.34 / 400, H = 100;
+    const mark = {
+      vb: '0 0 663.34 400',
+      p1: 'M42.4 277L132.2 16.2A24 24 0 0 1 154.9 0L352.1 0A24 24 0 0 1 374.8 31.8L291 275.3L290.6 275L289.6 273.8L288.7 272.7L287.9 271.4L287.1 270.1L286.4 268.8L285.9 267.4L285.4 265.9L285 264.5L284.7 263L284.5 261.2L273.8 131.7L273.4 128.2L272.7 124.6L271.7 121L270.6 117.5L269.2 114.1L267.5 110.7L265.6 107.5L263.6 104.5L261.3 101.6L258.8 98.8L256.1 96.2L253.3 93.9L250.3 91.7L247.1 89.7L243.9 87.9L240.5 86.4L237 85.1L233.5 84.1L229.9 83.3L226.2 82.7L222.5 82.4L218.8 82.4L215.1 82.6L211.4 83L207.8 83.8L204.2 84.7L200.7 85.9L197.3 87.4L194 89L190.8 90.9L187.8 93L184.9 95.3L182.1 97.8L179.6 100.5L177.4 103.2L46.4 272.9L45.3 274.3L44.3 275.4L43.1 276.4Z',
+      p2: 'M281.4 302.9L253.6 383.8A24 24 0 0 1 230.9 400L33.6 400A24 24 0 0 1 11 368.2L31.1 309.6L33.3 309.5L36.7 309L40.1 308.4L43.4 307.5L46.7 306.4L49.8 305.1L52.9 303.5L55.8 301.8L58.7 299.8L61.4 297.7L63.9 295.3L66.2 292.9L68.3 290.4L199.2 120.7L200.5 119.1L201.8 117.8L203.1 116.6L204.5 115.5L205.9 114.5L207.5 113.6L209.1 112.8L210.7 112.1L212.4 111.5L214.1 111L215.9 110.7L217.6 110.5L219.4 110.4L221.2 110.4L223 110.6L224.7 110.8L226.5 111.2L228.2 111.7L229.9 112.3L231.5 113.1L233 113.9L234.6 114.9L236 115.9L237.4 117.1L238.6 118.3L239.8 119.6L240.9 121L241.9 122.5L242.8 124L243.6 125.6L244.3 127.3L244.9 129L245.3 130.7L245.7 132.5L245.9 134.5L256.6 264L257 267.2L257.7 270.6L258.5 273.9L259.6 277.2L260.9 280.3L262.4 283.4L264.2 286.4L266.1 289.2L268.2 291.9L270.5 294.4L273 296.8L275.6 299L278.4 301.1L281.3 302.9Z',
+      p3: 'M320 277L409.8 16.2A24 24 0 0 1 432.5 0L629.7 0A24 24 0 0 1 652.4 31.8L568.6 275.3L568.3 275L567.3 273.8L566.3 272.7L565.5 271.4L564.7 270.1L564 268.8L563.5 267.4L563 265.9L562.6 264.5L562.3 263L562.1 261.2L551.4 131.7L551 128.2L550.3 124.6L549.4 121L548.2 117.5L546.8 114.1L545.1 110.7L543.3 107.5L541.2 104.5L538.9 101.6L536.4 98.8L533.7 96.2L530.9 93.9L527.9 91.7L524.8 89.7L521.5 87.9L518.1 86.4L514.6 85.1L511.1 84.1L507.5 83.3L503.8 82.7L500.1 82.4L496.4 82.4L492.7 82.6L489 83L485.4 83.8L481.8 84.7L478.3 85.9L474.9 87.4L471.6 89L468.4 90.9L465.4 93L462.5 95.3L459.7 97.8L457.2 100.5L455 103.2L324 272.9L322.9 274.3L321.9 275.4L320.8 276.4Z',
+      p4: 'M559 302.9L531.2 383.8A24 24 0 0 1 508.5 400L311.3 400A24 24 0 0 1 288.6 368.2L308.7 309.6L311 309.5L314.4 309L317.7 308.4L321 307.5L324.3 306.4L327.5 305.1L330.5 303.5L333.5 301.8L336.3 299.8L339 297.7L341.5 295.3L343.9 292.9L345.9 290.4L476.8 120.7L478.1 119.1L479.4 117.8L480.7 116.6L482.1 115.5L483.5 114.5L485.1 113.6L486.7 112.8L488.3 112.1L490 111.5L491.7 111L493.5 110.7L495.2 110.5L497 110.4L498.8 110.4L500.6 110.6L502.3 110.8L504.1 111.2L505.8 111.7L507.5 112.3L509.1 113.1L510.7 113.9L512.2 114.9L513.6 115.9L515 117.1L516.3 118.3L517.5 119.6L518.6 121L519.6 122.5L520.5 124L521.3 125.6L521.9 127.3L522.5 129L522.9 130.7L523.3 132.5L523.5 134.5L534.3 264L534.6 267.2L535.3 270.6L536.1 273.9L537.2 277.2L538.5 280.3L540 283.4L541.8 286.4L543.7 289.2L545.8 291.9L548.1 294.4L550.6 296.8L553.2 299L556 301.1L558.9 302.9Z'
+    };
+    const r1 = (n) => Math.round(n * 10) / 10;
+    const pt = (p) => r1(p[0]) + ' ' + r1(p[1]);
+
+    // Centerline polyline with circular fillets of centerline radius rad.
+    const roundPoly = (pts, rad, closed) => {
+      const n = pts.length;
+      const corner = (i) => {
+        const v = pts[i], p = pts[(i - 1 + n) % n], q = pts[(i + 1) % n];
+        const ax = p[0] - v[0], ay = p[1] - v[1], bx = q[0] - v[0], by = q[1] - v[1];
+        const la = Math.hypot(ax, ay), lb = Math.hypot(bx, by);
+        const phi = Math.acos(Math.max(-1, Math.min(1, (ax * bx + ay * by) / (la * lb))));
+        if (rad <= 0 || phi > Math.PI - 1e-3) return { v, sharp: true };
+        const ka = closed || i > 1 ? la / 2 : la * 0.9, kb = closed || i < n - 2 ? lb / 2 : lb * 0.9;
+        const d = Math.min(rad / Math.tan(phi / 2), ka, kb), re = d * Math.tan(phi / 2);
+        const cross = (v[0] - p[0]) * (q[1] - v[1]) - (v[1] - p[1]) * (q[0] - v[0]);
+        return { a: [v[0] + ax / la * d, v[1] + ay / la * d], b: [v[0] + bx / lb * d, v[1] + by / lb * d], re: r1(re), sw: cross > 0 ? 1 : 0 };
+      };
+      const seg = (k) => k.sharp ? 'L' + pt(k.v) : 'L' + pt(k.a) + 'A' + k.re + ' ' + k.re + ' 0 0 ' + k.sw + ' ' + pt(k.b);
+      if (!closed) {
+        let d = 'M' + pt(pts[0]);
+        for (let i = 1; i < n - 1; i++) d += seg(corner(i));
+        return d + 'L' + pt(pts[n - 1]);
+      }
+      const ks = pts.map((_, i) => corner(i));
+      let d = 'M' + pt(ks[0].sharp ? ks[0].v : ks[0].b);
+      for (let i = 1; i < n; i++) d += seg(ks[i]);
+      return d + (ks[0].sharp ? '' : seg(ks[0])) + 'Z';
+    };
+
+    // One glyph: S = stroked centerlines, D = diagonals with flat (horizontal) ends.
+    const glyph = (ch, v) => {
+      const t = v.t, c = t / 2, g = v.g, wf = v.wf, yt = c, yb = H - c, ym = H / 2;
+      const S = [], D = [];
+      const leg = (f) => {
+        let wd = t, q = f(wd);
+        for (let k = 0; k < 10; k++) { wd = t * Math.hypot(q.xt - q.xb, q.yb - q.yt) / (q.yb - q.yt); q = f(wd); }
+        return q;
+      };
+      let w = H;
+      if (ch === 'M') {
+        w = 1.42 * H * wf;
+        if (v.M === 'v') {
+          const vy = 0.64 * H;
+          S.push([[c, H], [c, 0]], [[w - c, H], [w - c, 0]]);
+          D.push(leg((wd) => ({ xb: w / 2, yb: vy, xt: wd / 2, yt: 0 })), leg((wd) => ({ xb: w / 2, yb: vy, xt: w - wd / 2, yt: 0 })));
+        } else {
+          S.push([[c, H], [c, yt], [w - c, yt], [w - c, H]], [[w / 2, g > 0 ? t + g : yt], [w / 2, H]]);
+        }
+      } else if (ch === 'E') {
+        w = 1.04 * H * wf;
+        if (v.E === 'stem') S.push([[w, yt], [c, yt], [c, yb], [w, yb]], [[g > 0 ? t + g : c, ym], [0.9 * w, ym]]);
+        else S.push([[0, yt], [w, yt]], [[0, ym], [w, ym]], [[0, yb], [w, yb]]);
+      } else if (ch === 'G') {
+        w = 1.3 * H * wf;
+        S.push([[w, yt], [c, yt], [c, yb], [w - c, yb], [w - c, ym - c]], [[0.54 * w, ym], [g > 0 ? w - t - g : w, ym]]);
+      } else if (ch === 'A') {
+        w = 1.36 * H * wf;
+        const a = v.aGap || 0;
+        const L = leg((wd) => ({ xb: wd / 2, yb: H, xt: a > 0 ? w / 2 - a / 2 - wd / 2 : w / 2, yt: 0 }));
+        const Rt = leg((wd) => ({ xb: w - wd / 2, yb: H, xt: a > 0 ? w / 2 + a / 2 + wd / 2 : w / 2, yt: 0 }));
+        D.push(L, Rt);
+        if (v.Abar) {
+          const y = 0.7 * H, f = (H - y) / H;
+          S.push([[L.xb + (L.xt - L.xb) * f, y], [Rt.xb + (Rt.xt - Rt.xb) * f, y]]);
+        }
+      } else if (ch === 'S') {
+        w = 1.22 * H * wf;
+        S.push([[w, yt], [c, yt], [c, ym], [w - c, ym], [w - c, yb], [0, yb]]);
+      } else if (ch === 'O') {
+        w = 1.36 * H * wf;
+        S.push({ pts: [[c, yt], [w - c, yt], [w - c, yb], [c, yb]], closed: true });
+      } else if (ch === 'L') {
+        w = 0.98 * H * wf;
+        S.push([[c, 0], [c, yb], [w, yb]]);
+      } else if (ch === 'R') {
+        w = 1.22 * H * wf;
+        S.push([[c, H], [c, yt], [w - c, yt], [w - c, ym], [c, ym]]);
+        D.push(leg((wd) => ({ xb: w - wd / 2, yb: H, xt: 0.52 * w, yt: g > 0 ? ym + c + g : ym })));
+      }
+      return { w, S, D };
+    };
+
+    const KERN = { LA: -0.1 };
+    const build = (v) => {
+      const t = v.t, c = t / 2, round = v.cap === 'round', word = 'MEGASOLAR';
+      let x = 0, ds = '', df = '';
+      for (let i = 0; i < word.length; i++) {
+        if (i > 0) x += (v.tr + (KERN[word[i - 1] + word[i]] || 0)) * H;
+        const gl = glyph(word[i], v);
+        gl.S.forEach((s) => {
+          const o = Array.isArray(s) ? { pts: s, closed: false } : s;
+          const pts = o.pts.map((p) => [p[0] + x, p[1]]);
+          if (round && !o.closed) {
+            const n = pts.length;
+            [[0, 1], [n - 1, n - 2]].forEach(([e, nb]) => {
+              const dx = pts[nb][0] - pts[e][0], dy = pts[nb][1] - pts[e][1], l = Math.hypot(dx, dy);
+              pts[e] = [pts[e][0] + dx / l * c, pts[e][1] + dy / l * c];
+            });
+          }
+          ds += roundPoly(pts, v.r, o.closed);
+        });
+        gl.D.forEach((q) => {
+          const xb = q.xb + x, xt = q.xt + x, dy = q.yb - q.yt, len = Math.hypot(xt - xb, dy);
+          if (round) {
+            const s = c * len / dy, ux = (xt - xb) / len;
+            ds += 'M' + pt([xb + ux * s, q.yb - c]) + 'L' + pt([xt - ux * s, q.yt + c]);
+          } else {
+            const h = t * len / dy / 2;
+            df += 'M' + pt([xb - h, q.yb]) + 'L' + pt([xb + h, q.yb]) + 'L' + pt([xt + h, q.yt]) + 'L' + pt([xt - h, q.yt]) + 'Z';
+          }
+        });
+        x += gl.w;
+      }
+      return { ds, df: df || 'M0 0', W: x };
+    };
+
+    const V = [
+      { n: 33, name: 'Split', desc: 'The core idea: wide letters, a three-bar E, an open A, breaks in M, G and R', t: 11, g: 7, r: 9, wf: 1, tr: 0.42 },
+      { n: 34, name: 'Hairline', desc: 'Thin and extra wide, with a classic V in the M; the most premium, best large', t: 5, g: 6, r: 5, wf: 1.14, tr: 0.62, M: 'v' },
+      { n: 35, name: 'Heavy', desc: 'Matches the weight of the mark and holds up at small sizes', t: 20, g: 8, r: 12, wf: 0.96, tr: 0.32 },
+      { n: 36, name: 'Closed', desc: 'Same alphabet with no breaks, a stem on the E and a bar in the A; most readable', t: 11, g: 0, r: 9, wf: 1, tr: 0.4, E: 'stem', Abar: true },
+      { n: 37, name: 'Square', desc: 'Sharp corners for a harder, infrastructure look', t: 11, g: 7, r: 0, wf: 1.06, tr: 0.44 },
+      { n: 38, name: 'Rounded', desc: 'Round ends and soft corners; friendlier, more software than hardware', t: 13, g: 8, r: 20, wf: 1, tr: 0.42, cap: 'round' },
+      { n: 39, name: 'Slanted', desc: 'The Split letters leaning at the panels’ 19° angle', t: 11, g: 7, r: 9, wf: 1, tr: 0.42, skew: 19 },
+      { n: 40, name: 'Panel A', desc: 'Each A is two leaning bars with a gap, like the mark’s panels', t: 11, g: 7, r: 9, wf: 1, tr: 0.42, aGap: 12 }
+    ];
+
+    const fit = (vbW, vbH, maxW, maxH) => {
+      let w = maxW, h = w * vbH / vbW;
+      if (h > maxH) { h = maxH; w = h * vbW / vbH; }
+      return { w: r1(w), h: r1(h) };
+    };
+    const shear = (v) => v.skew ? H * Math.tan(v.skew * Math.PI / 180) : 0;
+    const wordOnly = (b, v, maxW, maxH) => {
+      const sk = shear(v), vbW = b.W + sk;
+      return Object.assign(fit(vbW, H, maxW, maxH), { vb: '0 0 ' + r1(vbW) + ' ' + H, wt: 'translate(' + r1(sk) + ' 0) skewX(' + -(v.skew || 0) + ')' });
+    };
+    const lockup = (b, v, maxW, maxH) => {
+      const sk = shear(v), mh = 1.4 * H, mw = mh * R, gap = 0.6 * H, y0 = -(mh - H) / 2, vbW = mw + gap + b.W + sk;
+      return Object.assign(fit(vbW, mh, maxW, maxH), {
+        vb: '0 ' + r1(y0) + ' ' + r1(vbW) + ' ' + r1(mh),
+        mt: 'translate(0 ' + r1(y0) + ') scale(' + (mh / 400).toFixed(4) + ')',
+        wt: 'translate(' + r1(mw + gap + sk) + ' 0) skewX(' + -(v.skew || 0) + ')'
+      });
+    };
+
+    const opts = V.map((v) => {
+      const b = build(v), cap = v.cap || 'butt';
+      return Object.assign({
+        n: v.n, name: v.name, desc: v.desc, accent, t: v.t, cap, join: cap === 'round' ? 'round' : 'miter',
+        ds: b.ds, df: b.df, wm: wordOnly(b, v, 640, 64), lk: lockup(b, v, 300, 34)
+      }, mark);
+    });
+    const pick = String(this.props.hero ?? '33 Split');
+    const hi = Math.max(0, V.findIndex((v) => pick.indexOf(String(v.n)) === 0));
+    const o = opts[hi], hv = V[hi];
+    const hero = { label: hv.n + ' ' + hv.name, ds: o.ds, df: o.df, t: o.t, cap: o.cap, join: o.join, nav: lockup(build(hv), hv, 260, 26) };
+    return { accent, mark, opts, hero };
+  }
+}
+</script>
+</body>
+</html>

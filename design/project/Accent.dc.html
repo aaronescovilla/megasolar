@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar · Accent options</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0C1014}a:hover{color:#5B6570}
+</style>
+</helmet>
+<div style="width: 1720px; height: 960px; box-sizing: border-box; padding: 48px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; align-items: start; background: #EEF0EB; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0C1014">
+
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="height: 60px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6570">Option A</div>
+<div style="font-size: 28px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1">Solar Yellow</div>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5B6570"><span style="display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: #FFD12E"></span>#FFD12E</div>
+</div>
+<div style="height: 220px; border-radius: 16px; background: #0C1014; display: flex; align-items: center; justify-content: center; gap: 14px">
+<svg width="56" height="56" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#FFD12E"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#FFFFFF"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#FFFFFF"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#FFFFFF"></path></svg>
+<div style="font-size: 46px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #FFFFFF">Megasolar</div>
+</div>
+<div style="height: 160px; border-radius: 16px; background: #FFD12E; display: flex; align-items: center; justify-content: center; gap: 12px">
+<svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#0C1014"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#0C1014"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#0C1014"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#0C1014"></path></svg>
+<div style="font-size: 36px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #0C1014">Megasolar</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1; min-height: 0; border-radius: 12px; background: #0C1014; padding: 18px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="font-size: 14px; font-weight: 500; color: #FFFFFF">Generation</div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #1B2127; font-size: 12px; color: #C9D1D9"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #FFD12E"></span>Live</div>
+</div>
+<div style="height: 116px; display: flex; align-items: flex-end; gap: 5px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="16"><div style="flex: 1; height: {{b.h}}; border-radius: 3px; background: #FFD12E"></div></sc-for>
+</div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #FFD12E; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Request a quote</button>
+<button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #D5D9D2; border-radius: 10px; background: #FFFFFF; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">View sites</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Ink on Solar Yellow</span><span style="font-family: 'Geist Mono', ui-monospace, monospace">13.1:1 · Pass</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Solar Yellow on white</span><span style="font-family: 'Geist Mono', ui-monospace, monospace; color: #B42318">1.5:1 · Fail</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="height: 60px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6570">Option B</div>
+<div style="font-size: 28px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1">Grid Green</div>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5B6570"><span style="display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: #3BE083"></span>#3BE083</div>
+</div>
+<div style="height: 220px; border-radius: 16px; background: #0C1014; display: flex; align-items: center; justify-content: center; gap: 14px">
+<svg width="56" height="56" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#3BE083"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#FFFFFF"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#FFFFFF"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#FFFFFF"></path></svg>
+<div style="font-size: 46px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #FFFFFF">Megasolar</div>
+</div>
+<div style="height: 160px; border-radius: 16px; background: #3BE083; display: flex; align-items: center; justify-content: center; gap: 12px">
+<svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#0C1014"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#0C1014"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#0C1014"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#0C1014"></path></svg>
+<div style="font-size: 36px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #0C1014">Megasolar</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1; min-height: 0; border-radius: 12px; background: #0C1014; padding: 18px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="font-size: 14px; font-weight: 500; color: #FFFFFF">Generation</div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #1B2127; font-size: 12px; color: #C9D1D9"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #3BE083"></span>Live</div>
+</div>
+<div style="height: 116px; display: flex; align-items: flex-end; gap: 5px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="16"><div style="flex: 1; height: {{b.h}}; border-radius: 3px; background: #3BE083"></div></sc-for>
+</div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #3BE083; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Request a quote</button>
+<button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #D5D9D2; border-radius: 10px; background: #FFFFFF; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">View sites</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Ink on Grid Green</span><span style="font-family: 'Geist Mono', ui-monospace, monospace">11.1:1 · Pass</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Grid Green on white</span><span style="font-family: 'Geist Mono', ui-monospace, monospace; color: #B42318">1.7:1 · Fail</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="height: 60px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6570">Option C · in between</div>
+<div style="font-size: 28px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1">Volt Lime</div>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5B6570"><span style="display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: #C4F24A"></span>#C4F24A</div>
+</div>
+<div style="height: 220px; border-radius: 16px; background: #0C1014; display: flex; align-items: center; justify-content: center; gap: 14px">
+<svg width="56" height="56" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#C4F24A"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#FFFFFF"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#FFFFFF"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#FFFFFF"></path></svg>
+<div style="font-size: 46px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #FFFFFF">Megasolar</div>
+</div>
+<div style="height: 160px; border-radius: 16px; background: #C4F24A; display: flex; align-items: center; justify-content: center; gap: 12px">
+<svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#0C1014"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#0C1014"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#0C1014"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#0C1014"></path></svg>
+<div style="font-size: 36px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #0C1014">Megasolar</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1; min-height: 0; border-radius: 12px; background: #0C1014; padding: 18px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="font-size: 14px; font-weight: 500; color: #FFFFFF">Generation</div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #1B2127; font-size: 12px; color: #C9D1D9"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #C4F24A"></span>Live</div>
+</div>
+<div style="height: 116px; display: flex; align-items: flex-end; gap: 5px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="16"><div style="flex: 1; height: {{b.h}}; border-radius: 3px; background: #C4F24A"></div></sc-for>
+</div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #C4F24A; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Request a quote</button>
+<button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #D5D9D2; border-radius: 10px; background: #FFFFFF; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">View sites</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Ink on Volt Lime</span><span style="font-family: 'Geist Mono', ui-monospace, monospace">14.7:1 · Pass</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Volt Lime on white</span><span style="font-family: 'Geist Mono', ui-monospace, monospace; color: #B42318">1.3:1 · Fail</span></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="height: 60px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5B6570">Option D · both</div>
+<div style="font-size: 28px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1">Field + Solar</div>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5B6570"><span style="display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: #0F3D2E"></span><span style="display: inline-block; width: 14px; height: 14px; border-radius: 4px; background: #FFD12E"></span>#0F3D2E</div>
+</div>
+<div style="height: 220px; border-radius: 16px; background: #0F3D2E; display: flex; align-items: center; justify-content: center; gap: 14px">
+<svg width="56" height="56" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#FFD12E"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#FFFFFF"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#FFFFFF"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#FFFFFF"></path></svg>
+<div style="font-size: 46px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #FFFFFF">Megasolar</div>
+</div>
+<div style="height: 160px; border-radius: 16px; background: #FFD12E; display: flex; align-items: center; justify-content: center; gap: 12px">
+<svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true"><circle cx="18" cy="27" r="11" fill="#0F3D2E"></circle><path d="M6 85H22L33.2 57H17.2Z" fill="#0F3D2E"></path><path d="M30 85H46L64.4 39H48.4Z" fill="#0F3D2E"></path><path d="M54 85H70L95.6 21H79.6Z" fill="#0F3D2E"></path></svg>
+<div style="font-size: 36px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: #0F3D2E">Megasolar</div>
+</div>
+<div style="height: 300px; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1; min-height: 0; border-radius: 12px; background: #0F3D2E; padding: 18px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="font-size: 14px; font-weight: 500; color: #FFFFFF">Generation</div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #1A5240; font-size: 12px; color: #CFE3DA"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #FFD12E"></span>Live</div>
+</div>
+<div style="height: 116px; display: flex; align-items: flex-end; gap: 5px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="16"><div style="flex: 1; height: {{b.h}}; border-radius: 3px; background: #FFD12E"></div></sc-for>
+</div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #FFD12E; color: #0C1014; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Request a quote</button>
+<button type="button" style="height: 44px; padding: 0 18px; border: 1px solid #D5D9D2; border-radius: 10px; background: #FFFFFF; color: #0F3D2E; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">View sites</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px">
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>Solar Yellow on Field</span><span style="font-family: 'Geist Mono', ui-monospace, monospace">8.4:1 · Pass</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span>White on Field</span><span style="font-family: 'Geist Mono', ui-monospace, monospace">12.2:1 · Pass</span></div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1720,"height":960}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const heights = [38, 52, 46, 61, 57, 70, 64, 79, 72, 60, 84, 77, 90, 71, 87, 96];
+    return { bars: heights.map((h) => ({ h: h + '%' })) };
+  }
+}
+</script>
+</body>
+</html>

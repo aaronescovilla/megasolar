@@ -1,0 +1,292 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Accent.dc.html": {
+      "h": 960,
+      "title": "Accent options",
+      "w": 1720,
+      "x": 0,
+      "y": 2040
+    },
+    "Applications.dc.html": {
+      "h": 1072,
+      "title": "Applications",
+      "w": 1600,
+      "x": 0,
+      "y": 4400
+    },
+    "GridSun.dc.html": {
+      "h": 720,
+      "title": "03 · Grid Sun",
+      "w": 960,
+      "x": 2080,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "h": 720,
+      "title": "01 · Array",
+      "w": 960,
+      "x": 0,
+      "y": 0
+    },
+    "Module.dc.html": {
+      "h": 720,
+      "title": "05 · Module",
+      "w": 960,
+      "x": 1040,
+      "y": 840
+    },
+    "Palette.dc.html": {
+      "h": 800,
+      "title": "Color",
+      "w": 1280,
+      "x": 0,
+      "y": 3480
+    },
+    "Radiant.dc.html": {
+      "h": 720,
+      "title": "04 · Radiant",
+      "w": 960,
+      "x": 0,
+      "y": 840
+    },
+    "SplitSun.dc.html": {
+      "h": 720,
+      "title": "02 · Split Sun",
+      "w": 960,
+      "x": 1040,
+      "y": 0
+    },
+    "Type.dc.html": {
+      "h": 800,
+      "title": "Type",
+      "w": 1280,
+      "x": 1360,
+      "y": 3480
+    },
+    "WaveConstruction.dc.html": {
+      "h": 800,
+      "title": "Wave mark · construction",
+      "w": 1280,
+      "x": 1680,
+      "y": -1480
+    },
+    "WaveMark.dc.html": {
+      "h": 1000,
+      "title": "Wave mark · rebuilt",
+      "w": 1600,
+      "x": 0,
+      "y": -1480
+    },
+    "WaveM.dc.html": {
+      "h": 1000,
+      "title": "Wave M · trial 3",
+      "w": 1600,
+      "x": 3040,
+      "y": -1480
+    },
+    "WaveVariants.dc.html": {
+      "h": 1040,
+      "title": "Wave M · variants A–H",
+      "w": 1600,
+      "x": 4720,
+      "y": -1480
+    },
+    "WordmarkOptions.dc.html": {
+      "h": 1040,
+      "title": "Wordmarks · options (1–6)",
+      "w": 1600,
+      "x": 0,
+      "y": -3200
+    },
+    "WordmarksExtended.dc.html": {
+      "h": 1240,
+      "title": "Wordmarks · extended caps (7–12)",
+      "w": 1600,
+      "x": 1680,
+      "y": -3200
+    },
+    "WordmarkIdeas.dc.html": {
+      "h": 1040,
+      "title": "Wordmarks · B2B SaaS ideas (13–20)",
+      "w": 1600,
+      "x": 3360,
+      "y": -3200
+    },
+    "LogoSuite.dc.html": {
+      "h": 1240,
+      "title": "Logo suite",
+      "w": 1760,
+      "x": 5040,
+      "y": -3200
+    },
+    "WordmarksTech.dc.html": {
+      "h": 1760,
+      "title": "Wordmarks · tech / B2B SaaS (21–32)",
+      "w": 1600,
+      "x": 0,
+      "y": -5440
+    },
+    "Wordmark.dc.html": {
+      "h": 720,
+      "title": "06 · Wordmark",
+      "w": 960,
+      "x": 2080,
+      "y": 840
+    },
+    "WordmarksTesla.dc.html": {
+      "h": 1820,
+      "title": "Wordmarks · Tesla-esque (33–40)",
+      "w": 1600,
+      "x": 1680,
+      "y": -5440
+    },
+    "SairaRefinements.dc.html": {
+      "h": 1520,
+      "title": "Saira · refinements (41–52)",
+      "w": 1600,
+      "x": 0,
+      "y": -7560
+    },
+    "SairaSuite.dc.html": {
+      "h": 1600,
+      "title": "Logo suite · final (42 Tuned)",
+      "w": 1760,
+      "x": 1680,
+      "y": -7560
+    },
+    "KitColor.dc.html": {
+      "h": 880,
+      "title": "Color",
+      "w": 1280,
+      "x": 0,
+      "y": -9240
+    },
+    "KitType.dc.html": {
+      "h": 880,
+      "title": "Type",
+      "w": 1280,
+      "x": 1360,
+      "y": -9240
+    },
+    "KitApplications.dc.html": {
+      "h": 1140,
+      "title": "Applications",
+      "w": 1600,
+      "x": 2720,
+      "y": -9240
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-05T15:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "t5": {
+      "kind": "title1",
+      "maxW": 1600,
+      "text": "Wordmarks · round 3",
+      "x": 0,
+      "y": -5740,
+      "w": 240
+    },
+    "t4": {
+      "kind": "title1",
+      "maxW": 6800,
+      "text": "Wordmark + logo suite",
+      "w": 240,
+      "x": 0,
+      "y": -3500
+    },
+    "t0": {
+      "kind": "title1",
+      "maxW": 6320,
+      "text": "Wave mark",
+      "w": 240,
+      "x": 0,
+      "y": -1780
+    },
+    "t1": {
+      "kind": "title1",
+      "maxW": 3040,
+      "text": "Logo directions",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "t2": {
+      "kind": "title1",
+      "maxW": 1720,
+      "text": "Accent — yellow or green?",
+      "w": 240,
+      "x": 0,
+      "y": 1740
+    },
+    "t3": {
+      "kind": "title1",
+      "maxW": 2640,
+      "text": "Brand kit · built on 01 Array (superseded)",
+      "w": 240,
+      "x": 0,
+      "y": 3180
+    },
+    "t6": {
+      "kind": "title1",
+      "maxW": 1600,
+      "text": "Round 4 · Tesla-esque",
+      "x": 1680,
+      "y": -5740,
+      "w": 240
+    },
+    "t7": {
+      "kind": "title1",
+      "maxW": 3440,
+      "text": "Saira · refinements + logo suite",
+      "x": 0,
+      "y": -7860,
+      "w": 240
+    },
+    "t8": {
+      "kind": "title1",
+      "maxW": 4320,
+      "text": "Brand kit · final",
+      "x": 0,
+      "y": -9540,
+      "w": 240
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "SplitSun.dc.html",
+    "GridSun.dc.html",
+    "Radiant.dc.html",
+    "Module.dc.html",
+    "Wordmark.dc.html",
+    "Accent.dc.html",
+    "Palette.dc.html",
+    "Type.dc.html",
+    "Applications.dc.html",
+    "WaveMark.dc.html",
+    "WaveConstruction.dc.html",
+    "WaveM.dc.html",
+    "WaveVariants.dc.html",
+    "WordmarkOptions.dc.html",
+    "LogoSuite.dc.html",
+    "WordmarksExtended.dc.html",
+    "WordmarkIdeas.dc.html",
+    "WordmarksTech.dc.html",
+    "WordmarksTesla.dc.html",
+    "SairaRefinements.dc.html",
+    "SairaSuite.dc.html",
+    "KitColor.dc.html",
+    "KitType.dc.html",
+    "KitApplications.dc.html"
+  ],
+  "pages": [],
+  "title": "Megasolar Brand Exploration"
+}

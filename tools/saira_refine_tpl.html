@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar · Saira refinements</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1600px; height: 1520px; box-sizing: border-box; padding: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 16px; background: #E6E8E3; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0C1014">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="12">
+<div style="position: relative; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; min-width: 0; min-height: 0">
+<div style="position: absolute; top: 16px; left: 18px; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #5B6570">{{o.n}}</div>
+<div style="position: absolute; top: 12px; right: 14px; display: {{o.tagDisp}}; padding: 4px 10px; border-radius: 999px; background: {{o.accent}}; font-size: 11px; font-weight: 600; color: #0C1014">{{o.tag}}</div>
+<div style="flex: 1; display: flex; align-items: center; justify-content: center; padding-top: 14px">
+<svg width="{{o.a.w}}" height="{{o.a.h}}" viewBox="{{o.a.vb}}" aria-hidden="true"><g transform="{{o.a.mt}}" fill="{{o.accent}}"><path d="{{o.p1}}"></path><path d="{{o.p2}}"></path><path d="{{o.p3}}"></path><path d="{{o.p4}}"></path></g><path transform="{{o.a.wt}}" d="{{o.d}}" fill="#0C1014"></path></svg>
+</div>
+<div style="display: flex; gap: 12px; margin: 0 16px">
+<div style="flex: 1; height: 80px; border-radius: 14px; background: #0C1014; display: flex; align-items: center; justify-content: center">
+<svg width="{{o.b.w}}" height="{{o.b.h}}" viewBox="{{o.b.vb}}" aria-hidden="true"><g transform="{{o.b.mt}}" fill="{{o.accent}}"><path d="{{o.p1}}"></path><path d="{{o.p2}}"></path><path d="{{o.p3}}"></path><path d="{{o.p4}}"></path></g><path transform="{{o.b.wt}}" d="{{o.d}}" fill="#FFFFFF"></path></svg>
+</div>
+<div style="flex: 1; height: 80px; border-radius: 14px; background: {{o.accent}}; display: flex; align-items: center; justify-content: center">
+<svg width="{{o.b.w}}" height="{{o.b.h}}" viewBox="{{o.b.vb}}" aria-hidden="true"><g transform="{{o.b.mt}}" fill="#0C1014"><path d="{{o.p1}}"></path><path d="{{o.p2}}"></path><path d="{{o.p3}}"></path><path d="{{o.p4}}"></path></g><path transform="{{o.b.wt}}" d="{{o.d}}" fill="#0C1014"></path></svg>
+</div>
+</div>
+<div style="padding: 12px 22px 16px; display: flex; align-items: baseline; gap: 12px; min-width: 0">
+<div style="flex: none; font-size: 16px; font-weight: 600">{{o.name}}</div>
+<div style="min-width: 0; font-size: 13px; color: #5B6570; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{o.spec}}</div>
+</div>
+</div>
+</sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFD12E","options":["#FFD12E","#EDBD1E","#3BE083","#C4F24A"]},"markSize":{"editor":"enum","default":"1.35× cap","options":["Cap height","1.35× cap","1.6× cap"]},"$preview":{"width":1600,"height":1520}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#FFD12E';
+    const k = { 'Cap height': 1, '1.35× cap': 1.35, '1.6× cap': 1.6 }[this.props.markSize] ?? 1.35;
+    const mark = __MARK__;
+    const V = __DATA__;
+__COMMON__
+    const opts = V.map((v) => Object.assign({
+      n: v.n, name: v.name, spec: v.spec, accent, d: v.word.d,
+      tag: v.n === 42 ? 'Recommended base' : '', tagDisp: v.n === 42 ? 'block' : 'none',
+      a: lockup(v, k, 440, 72), b: lockup(v, k, 196, 26)
+    }, mark));
+    return { opts };
+  }
+}
+</script>
+</body>
+</html>

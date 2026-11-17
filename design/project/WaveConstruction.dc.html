@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar · Wave mark construction</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0C1014}a:hover{color:#5B6570}
+</style>
+</helmet>
+<div style="width: 1280px; height: 800px; box-sizing: border-box; padding: 56px; display: flex; align-items: center; gap: 40px; background: #FFFFFF; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0C1014">
+
+<svg width="{{c.svgW}}" height="{{c.svgH}}" viewBox="{{c.vb}}" role="img" aria-label="Construction of the wave mark">
+<g fill="#FFD12E"><path d="{{c.p1}}"></path><path d="{{c.p2}}"></path><path d="{{c.p3}}"></path><path d="{{c.p4}}"></path></g>
+<g stroke="#5B6570" style="stroke-width: 0.75; opacity: 0.55">
+<line x1="{{c.gl}}" x2="{{c.gr}}" y1="0" y2="0"></line>
+<line x1="{{c.gl}}" x2="{{c.gr}}" y1="{{c.yCrest}}" y2="{{c.yCrest}}"></line>
+<line x1="{{c.gl}}" x2="{{c.gr}}" y1="{{c.yAxis}}" y2="{{c.yAxis}}"></line>
+<line x1="{{c.gl}}" x2="{{c.gr}}" y1="{{c.yTrough}}" y2="{{c.yTrough}}"></line>
+<line x1="{{c.gl}}" x2="{{c.gr}}" y1="{{c.yBase}}" y2="{{c.yBase}}"></line>
+</g>
+<g fill="none" stroke="#0C1014" style="stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.6">
+<polygon points="{{c.o1}}"></polygon>
+<polygon points="{{c.o2}}"></polygon>
+<line x1="{{c.gapX1}}" y1="{{c.gapY1}}" x2="{{c.gapX2}}" y2="0"></line>
+<line x1="{{c.crest1X}}" y1="{{c.yCrest}}" x2="{{c.crest1X}}" y2="{{c.perY}}"></line>
+<line x1="{{c.crest2X}}" y1="{{c.yCrest}}" x2="{{c.crest2X}}" y2="{{c.perY}}"></line>
+<circle cx="{{c.rcx}}" cy="{{c.rcy}}" r="{{c.r}}"></circle>
+</g>
+<path d="{{c.center}}" fill="none" stroke="#0C1014" style="stroke-width: 1.25; stroke-dasharray: 7 4"></path>
+<g stroke="#0C1014" style="stroke-width: 1">
+<line x1="{{c.crest1X}}" y1="{{c.perY}}" x2="{{c.crest2X}}" y2="{{c.perY}}"></line>
+<line x1="{{c.crest1X}}" y1="{{c.perT1}}" x2="{{c.crest1X}}" y2="{{c.perT2}}"></line>
+<line x1="{{c.crest2X}}" y1="{{c.perT1}}" x2="{{c.crest2X}}" y2="{{c.perT2}}"></line>
+<line x1="{{c.gBandX}}" y1="{{c.gBandY1}}" x2="{{c.gBandX}}" y2="{{c.gBandY2}}"></line>
+<line x1="{{c.gBandXa}}" y1="{{c.gBandY1}}" x2="{{c.gBandXb}}" y2="{{c.gBandY1}}"></line>
+<line x1="{{c.gBandXa}}" y1="{{c.gBandY2}}" x2="{{c.gBandXb}}" y2="{{c.gBandY2}}"></line>
+<line x1="0" y1="{{c.yBase}}" x2="0" y2="{{c.slantTopY}}"></line>
+<path d="{{c.slantArc}}" fill="none"></path>
+<line x1="{{c.rcx}}" y1="{{c.rcy}}" x2="{{c.rcx}}" y2="0"></line>
+<line x1="{{c.aX}}" y1="{{c.yCrest}}" x2="{{c.aX}}" y2="{{c.yAxis}}"></line>
+<line x1="{{c.aXa}}" y1="{{c.yCrest}}" x2="{{c.aXb}}" y2="{{c.yCrest}}"></line>
+<line x1="{{c.aXa}}" y1="{{c.yAxis}}" x2="{{c.aXb}}" y2="{{c.yAxis}}"></line>
+<line x1="{{c.hX}}" y1="0" x2="{{c.hX}}" y2="{{c.yBase}}"></line>
+<line x1="{{c.hXa}}" y1="0" x2="{{c.hXb}}" y2="0"></line>
+<line x1="{{c.hXa}}" y1="{{c.yBase}}" x2="{{c.hXb}}" y2="{{c.yBase}}"></line>
+</g>
+<circle cx="{{c.troughX}}" cy="{{c.yTrough}}" r="4.5" fill="#0C1014"></circle>
+<circle cx="{{c.crest1X}}" cy="{{c.yCrest}}" r="4.5" fill="#FFFFFF" stroke="#0C1014" style="stroke-width: 1.25"></circle>
+<circle cx="{{c.crest2X}}" cy="{{c.yCrest}}" r="4.5" fill="#FFFFFF" stroke="#0C1014" style="stroke-width: 1.25"></circle>
+<circle cx="{{c.rcx}}" cy="{{c.rcy}}" r="2.5" fill="#0C1014"></circle>
+<g style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; fill: #5B6570; text-anchor: end">
+<text x="{{c.labelX}}" y="4">top</text>
+<text x="{{c.labelX}}" y="{{c.yCrestT}}">crest</text>
+<text x="{{c.labelX}}" y="{{c.yAxisT}}">axis</text>
+<text x="{{c.labelX}}" y="{{c.yTroughT}}">trough</text>
+<text x="{{c.labelX}}" y="{{c.yBaseT}}">base</text>
+</g>
+<g style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600; fill: #0C1014">
+<text x="{{c.perMid}}" y="{{c.perLabelY}}" style="text-anchor: middle">period = panel pitch</text>
+<text x="{{c.gapLabelX}}" y="-12" style="text-anchor: middle">G</text>
+<text x="{{c.gBandLabelX}}" y="{{c.gBandLabelY}}">G</text>
+<text x="{{c.slantLabelX}}" y="{{c.slantLabelY}}" style="text-anchor: middle">{{c.slantText}}</text>
+<text x="{{c.rLabelX}}" y="-10">r</text>
+<text x="{{c.aLabelX}}" y="{{c.aMidY}}">A</text>
+<text x="{{c.hLabelX}}" y="{{c.hMidY}}">H</text>
+</g>
+</svg>
+
+<div style="width: 240px; flex-shrink: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Construction</div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">H</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">Panel height. Every other measure is a share of H.</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">G · 7% H</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">One cut width for both the wave and the gap between panels.</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">A · 11% H</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">Sine amplitude, on an axis 47% down from the top.</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">Period</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">Equal to the panel pitch, so both panels carry an identical cut.</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">Trough</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">Lands exactly on the axis of the panel gap.</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 600">r · 6% H · 19°</div><div style="font-size: 13px; line-height: 1.45; color: #5B6570">One corner radius on every outer corner; panels lean 19° from vertical.</div></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+  buildMark(o, panels) {
+    const H = 400;
+    const a = o.slant * Math.PI / 180;
+    const k = Math.tan(a), sa = Math.sin(a), ca = Math.cos(a);
+    const s = k * H;
+    const W = o.panelWidth / 100 * H;
+    const G = o.cut / 100 * H;
+    const h = G / 2;
+    const gh = G / ca;
+    const P = W + gh;
+    const A = o.amplitude / 100 * H;
+    const yc = o.waveHeight / 100 * H;
+    const r = o.cornerRadius / 100 * H;
+    const w = 2 * Math.PI / P;
+    const xc0 = W + gh / 2 + k * (H - (yc + A)) - P / 2;
+    const f = (n) => String(Math.round(n * 100) / 100);
+    const pt = (p) => f(p[0]) + ' ' + f(p[1]);
+    const sample = (x0, x1, side) => {
+      const out = [];
+      for (let x = x0; x <= x1; x += 2) {
+        const t = w * (x - xc0);
+        const y = yc - A * Math.cos(t);
+        const dy = A * w * Math.sin(t);
+        const n = Math.sqrt(1 + dy * dy);
+        out.push(side < 0 ? [x + dy * h / n, y - h / n] : [x - dy * h / n, y + h / n]);
+      }
+      return out;
+    };
+    const cross = (pts, g, from) => {
+      for (let j = Math.max(1, from); j < pts.length; j++) {
+        const g0 = g(pts[j - 1]), g1 = g(pts[j]);
+        if (g0 < 0 && g1 >= 0) {
+          const t = g0 / (g0 - g1);
+          return { j, p: [pts[j - 1][0] + t * (pts[j][0] - pts[j - 1][0]), pts[j - 1][1] + t * (pts[j][1] - pts[j - 1][1])] };
+        }
+      }
+      return null;
+    };
+    const corner = (V, u1, u2) => {
+      const c = Math.max(-1, Math.min(1, u1[0] * u2[0] + u1[1] * u2[1]));
+      const d = r / Math.tan(Math.acos(c) / 2);
+      return 'L' + pt([V[0] + u1[0] * d, V[1] + u1[1] * d]) + 'A' + f(r) + ' ' + f(r) + ' 0 0 1 ' + pt([V[0] + u2[0] * d, V[1] + u2[1] * d]);
+    };
+    const up = [sa, -ca], down = [-sa, ca], right = [1, 0], left = [-1, 0];
+    const paths = [];
+    for (let i = 0; i < panels; i++) {
+      const ox = i * P;
+      const gL = (q) => q[0] - (ox + k * (H - q[1]));
+      const gR = (q) => q[0] - (ox + W + k * (H - q[1]));
+      const uPts = sample(ox - 40, ox + W + s + 40, -1);
+      const uL = cross(uPts, gL, 1);
+      const uR = uL && cross(uPts, gR, uL.j);
+      const lPts = sample(ox - 40, ox + W + s + 40, 1);
+      const lL = cross(lPts, gL, 1);
+      const lR = lL && cross(lPts, gR, lL.j);
+      if (!uR || !lR) { paths.push('', ''); continue; }
+      let d = 'M' + pt(uL.p) + corner([ox + s, 0], down, right) + corner([ox + W + s, 0], left, down) + 'L' + pt(uR.p);
+      for (let j = uR.j - 1; j >= uL.j; j--) d += 'L' + pt(uPts[j]);
+      paths.push(d + 'Z');
+      d = 'M' + pt(lR.p) + corner([ox + W, H], up, left) + corner([ox, H], right, up) + 'L' + pt(lL.p);
+      for (let j = lL.j; j < lR.j; j++) d += 'L' + pt(lPts[j]);
+      paths.push(d + 'Z');
+    }
+    return { paths, vw: (panels - 1) * P + W + s, vh: H };
+  }
+
+  renderVals() {
+    const o = { slant: 19, panelWidth: 62, cut: 7, amplitude: 11, waveHeight: 47, cornerRadius: 6 };
+    const m = this.buildMark(o, 2);
+    const H = 400;
+    const a = o.slant * Math.PI / 180;
+    const k = Math.tan(a), sa = Math.sin(a), ca = Math.cos(a);
+    const s = k * H;
+    const W = o.panelWidth / 100 * H;
+    const G = o.cut / 100 * H;
+    const h = G / 2;
+    const gh = G / ca;
+    const P = W + gh;
+    const A = o.amplitude / 100 * H;
+    const yc = o.waveHeight / 100 * H;
+    const r = o.cornerRadius / 100 * H;
+    const w = 2 * Math.PI / P;
+    const yT = yc + A, yC = yc - A;
+    const xc0 = W + gh / 2 + k * (H - yT) - P / 2;
+    const vw = m.vw;
+    const f = (n) => Math.round(n * 100) / 100;
+    const poly = (ox) => [[ox, H], [ox + W, H], [ox + W + s, 0], [ox + s, 0]].map((q) => f(q[0]) + ',' + f(q[1])).join(' ');
+    let center = '';
+    for (let x = -30; x <= vw + 30; x += 3) {
+      center += (center ? 'L' : 'M') + f(x) + ' ' + f(yc - A * Math.cos(w * (x - xc0)));
+    }
+    const gx = (y) => W + gh / 2 + k * (H - y);
+    const R = 110;
+    const u1 = [-1, 0], u2 = [-sa, ca];
+    const bx = u1[0] + u2[0], by = u1[1] + u2[1], bl = Math.hypot(bx, by);
+    const dist = r / Math.sin(Math.acos(u1[0] * u2[0] + u1[1] * u2[1]) / 2);
+    const V = [P + W + s, 0];
+    const rc = [V[0] + bx / bl * dist, V[1] + by / bl * dist];
+    const vx = -96, vy = -84, vW = vw + 96 + 104, vH = 560;
+    const svgW = 880;
+    return {
+      c: {
+        vb: vx + ' ' + vy + ' ' + f(vW) + ' ' + vH,
+        svgW,
+        svgH: f(svgW * vH / vW),
+        p1: m.paths[0], p2: m.paths[1], p3: m.paths[2], p4: m.paths[3],
+        o1: poly(0), o2: poly(P),
+        center,
+        gl: -14, gr: f(vw + 44), labelX: -22,
+        yCrest: f(yC), yAxis: f(yc), yTrough: f(yT), yBase: H,
+        yCrestT: f(yC + 4), yAxisT: f(yc + 4), yTroughT: f(yT + 4), yBaseT: H + 4,
+        gapX1: f(gx(H + 24)), gapY1: H + 24, gapX2: f(gx(0)),
+        troughX: f(gx(yT)),
+        crest1X: f(xc0), crest2X: f(xc0 + P),
+        perY: -40, perT1: -46, perT2: -34, perMid: f(xc0 + P / 2), perLabelY: -52,
+        gapLabelX: f(W + s + gh / 2),
+        gBandX: f(xc0), gBandXa: f(xc0 - 5), gBandXb: f(xc0 + 5),
+        gBandY1: f(yC - h), gBandY2: f(yC + h),
+        gBandLabelX: f(xc0 + 9), gBandLabelY: f(yC - h - 4),
+        slantArc: 'M0 ' + f(H - R) + 'A' + R + ' ' + R + ' 0 0 1 ' + f(R * sa) + ' ' + f(H - R * ca),
+        slantTopY: H - 150,
+        slantLabelX: f(132 * Math.sin(a / 2)), slantLabelY: f(H - 132 * Math.cos(a / 2)),
+        slantText: o.slant + '°',
+        rcx: f(rc[0]), rcy: f(rc[1]), r: f(r), rLabelX: f(rc[0] - 4),
+        aX: f(vw + 26), aXa: f(vw + 21), aXb: f(vw + 31), aLabelX: f(vw + 36), aMidY: f(yc - A / 2 + 5),
+        hX: f(vw + 64), hXa: f(vw + 59), hXb: f(vw + 69), hLabelX: f(vw + 74), hMidY: H / 2 + 5
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

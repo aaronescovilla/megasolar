@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar · Applications</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Saira:wdth,wght@50..125,100..900&amp;display=swap">
+<style>
+body{margin:0}
+.sx{font-family:'Saira',sans-serif;font-stretch:125%;font-weight:600}
+.mono{font-family:'Geist Mono',ui-monospace,monospace}
+</style>
+</helmet>
+<div style="width: 1600px; height: 1140px; box-sizing: border-box; padding: 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 16px; background: #0A0C0F; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; color: #0C1014">
+
+<div style="grid-column: 1 / 3; border-radius: 20px; background: #F7F8F5; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 64px; flex: none; box-sizing: border-box; padding: 0 24px; border-bottom: 1px solid #E3E6E0; display: flex; align-items: center; gap: 28px">
+<svg width="{{nav.w}}" height="{{nav.h}}" viewBox="{{nav.vb}}" role="img" aria-label="Megasolar"><g transform="{{nav.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{nav.wt}}" d="{{word}}" fill="#0C1014"></path></svg>
+<div style="display: flex; gap: 20px; font-size: 14px; color: #2A3138"><span>Platform</span><span>Solutions</span><span>Customers</span><span>Pricing</span></div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 16px">
+<span style="font-size: 14px; color: #2A3138">Sign in</span>
+<span style="height: 40px; box-sizing: border-box; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 10px; background: #0C1014; color: #FFFFFF; font-size: 14px; font-weight: 500">Book a demo</span>
+</div>
+</div>
+<div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; gap: 24px">
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+<div class="sx" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #5B6570">Commercial solar platform</div>
+<div class="sx" style="font-size: 30px; letter-spacing: -0.015em; line-height: 1.12">Solar, run like software.</div>
+<div style="font-size: 15px; line-height: 1.45; color: #5B6570">Track output, catch faults early and report savings across every site.</div>
+<div style="margin-top: 4px; display: flex; gap: 10px">
+<span style="height: 42px; box-sizing: border-box; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 10px; background: {{accent}}; font-size: 14px; font-weight: 600">Get a site assessment</span>
+<span style="height: 42px; box-sizing: border-box; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 10px; border: 1px solid #D5D9D2; background: #FFFFFF; font-size: 14px; font-weight: 500">See the platform</span>
+</div>
+</div>
+<div style="width: 210px; flex: none; box-sizing: border-box; border-radius: 14px; background: #0C1014; padding: 16px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; align-items: center; justify-content: space-between"><span style="font-size: 13px; font-weight: 500; color: #FFFFFF">Output</span><span class="mono" style="font-size: 11px; color: #8B949E">Today</span></div>
+<div class="mono" style="font-size: 24px; font-weight: 500; color: #FFFFFF">4.82 MWh</div>
+<div style="height: 110px; display: flex; align-items: flex-end; gap: 5px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="12"><div style="flex: 1; height: {{b.h}}; border-radius: 3px; background: {{accent}}"></div></sc-for>
+</div>
+</div>
+</div>
+</div>
+
+<div style="grid-column: 3 / 5; border-radius: 20px; background: #E3E6E0; display: flex; align-items: center; justify-content: center; padding: 24px">
+<div style="width: 100%; border-radius: 14px; background: #FFFFFF; overflow: hidden; box-shadow: 0 10px 28px rgba(12, 16, 20, 0.12)">
+<div style="position: relative; height: 168px; background: #0C1014; display: flex; align-items: center; justify-content: space-between; padding: 0 36px">
+<svg width="{{soc.w}}" height="{{soc.h}}" viewBox="{{soc.vb}}" role="img" aria-label="Megasolar"><g transform="{{soc.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{soc.wt}}" d="{{word}}" fill="#FFFFFF"></path></svg>
+<div class="sx" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8B949E; text-align: right; line-height: 1.6">Solar,<br>run like software.</div>
+</div>
+<div style="position: relative; padding: 50px 24px 20px">
+<div style="position: absolute; left: 24px; top: -44px; width: 88px; height: 88px; box-sizing: border-box; border-radius: 50%; border: 4px solid #FFFFFF; background: {{accent}}; display: flex; align-items: center; justify-content: center">
+<svg width="54" height="32" viewBox="{{sm.vb}}" aria-hidden="true"><g fill="#0C1014"><path d="{{sm.p1}}"></path><path d="{{sm.p2}}"></path><path d="{{sm.p3}}"></path><path d="{{sm.p4}}"></path></g></svg>
+</div>
+<div style="font-size: 19px; font-weight: 600">Megasolar</div>
+<div style="margin-top: 4px; font-size: 13px; color: #5B6570">Monitoring, billing and O&amp;M for commercial solar · 2,480 followers</div>
+</div>
+</div>
+</div>
+
+<div style="grid-column: 1 / 3; border-radius: 20px; background: #0C1014; padding: 22px; display: flex">
+<div style="flex: 1; min-width: 0; border-radius: 14px; background: #12171D; border: 1px solid #222A33; overflow: hidden; display: flex">
+<div style="width: 190px; flex: none; box-sizing: border-box; padding: 18px 16px; border-right: 1px solid #222A33; display: flex; flex-direction: column; gap: 6px">
+<svg style="margin: 2px 0 18px 4px" width="{{dash.w}}" height="{{dash.h}}" viewBox="{{dash.vb}}" role="img" aria-label="Megasolar"><g transform="{{dash.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{dash.wt}}" d="{{word}}" fill="#FFFFFF"></path></svg>
+<div style="padding: 8px 10px; border-radius: 8px; background: #1B2127; font-size: 13px; font-weight: 500; color: #FFFFFF; display: flex; align-items: center; gap: 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{accent}}"></span>Overview</div>
+<div style="padding: 8px 10px 8px 24px; font-size: 13px; color: #8B949E">Sites</div>
+<div style="padding: 8px 10px 8px 24px; font-size: 13px; color: #8B949E">Output</div>
+<div style="padding: 8px 10px 8px 24px; font-size: 13px; color: #8B949E">Alerts</div>
+<div style="padding: 8px 10px 8px 24px; font-size: 13px; color: #8B949E">Billing</div>
+</div>
+<div style="flex: 1; min-width: 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: baseline; justify-content: space-between"><div class="sx" style="font-size: 20px; color: #FFFFFF">Portfolio</div><div class="mono" style="font-size: 12px; color: #8B949E">130 sites · live</div></div>
+<div style="display: flex; gap: 10px">
+<div style="flex: 1; border-radius: 10px; background: #181E25; padding: 12px 14px"><div style="font-size: 12px; color: #8B949E">Output today</div><div class="mono" style="margin-top: 6px; font-size: 20px; font-weight: 500; color: #FFFFFF">4.82 MWh</div></div>
+<div style="flex: 1; border-radius: 10px; background: #181E25; padding: 12px 14px"><div style="font-size: 12px; color: #8B949E">Sites online</div><div class="mono" style="margin-top: 6px; font-size: 20px; font-weight: 500; color: #FFFFFF">128 / 130</div></div>
+<div style="flex: 1; border-radius: 10px; background: #181E25; padding: 12px 14px"><div style="font-size: 12px; color: #8B949E">Savings, month</div><div class="mono" style="margin-top: 6px; font-size: 20px; font-weight: 500; color: #FFFFFF">$41,920</div></div>
+</div>
+<div style="flex: 1; min-height: 0; display: flex; align-items: flex-end; gap: 6px">
+<sc-for list="{{bars2}}" as="q" hint-placeholder-count="24"><div style="flex: 1; height: {{q.h}}; border-radius: 3px; background: {{q.c}}"></div></sc-for>
+</div>
+</div>
+</div>
+</div>
+
+<div style="border-radius: 20px; background: #E3E6E0; position: relative; overflow: hidden">
+<div style="position: absolute; left: 34px; top: 44px; width: 290px; height: 166px; border-radius: 10px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(12, 16, 20, 0.14); box-sizing: border-box; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between">
+<div><div style="font-size: 16px; font-weight: 600">Alex Rivera</div><div style="margin-top: 2px; font-size: 12px; color: #5B6570">Head of Partnerships</div></div>
+<div class="mono" style="font-size: 11px; line-height: 17px; color: #2A3138">alex@megasolar.com<br>+1 555 014 2290</div>
+</div>
+<div style="position: absolute; left: 60px; top: 166px; width: 290px; height: 166px; border-radius: 10px; background: #0C1014; box-shadow: 0 14px 30px rgba(12, 16, 20, 0.22); display: flex; align-items: center; justify-content: center">
+<svg width="{{card.w}}" height="{{card.h}}" viewBox="{{card.vb}}" role="img" aria-label="Megasolar"><g transform="{{card.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{card.wt}}" d="{{word}}" fill="#FFFFFF"></path></svg>
+</div>
+</div>
+
+<div style="border-radius: 20px; background: #F7F8F5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 0 22px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<div style="width: 112px; height: 112px; border-radius: 26px; background: #0C1014; display: flex; align-items: center; justify-content: center"><svg width="85" height="50.3" viewBox="{{sm.vb}}" aria-hidden="true"><g fill="{{accent}}"><path d="{{sm.p1}}"></path><path d="{{sm.p2}}"></path><path d="{{sm.p3}}"></path><path d="{{sm.p4}}"></path></g></svg></div>
+<div style="font-size: 13px; font-weight: 500">Megasolar</div>
+</div>
+<div style="width: 100%; box-sizing: border-box; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3E6E0; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start">
+<div style="width: 34px; height: 34px; flex: none; border-radius: 9px; background: #0C1014; display: flex; align-items: center; justify-content: center"><svg width="26" height="15.4" viewBox="{{sm.vb}}" aria-hidden="true"><g fill="{{accent}}"><path d="{{sm.p1}}"></path><path d="{{sm.p2}}"></path><path d="{{sm.p3}}"></path><path d="{{sm.p4}}"></path></g></svg></div>
+<div style="min-width: 0"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: #5B6570"><span style="font-weight: 600; color: #0C1014">Megasolar</span><span>now</span></div><div style="margin-top: 3px; font-size: 13px; line-height: 18px">Site 14 is back online. Output restored at 11:42.</div></div>
+</div>
+</div>
+
+<div style="grid-column: 1 / 3; position: relative; overflow: hidden; border-radius: 20px; background: #0C1014; box-sizing: border-box; padding: 34px 40px; display: flex; flex-direction: column; justify-content: space-between">
+<svg style="position: absolute; right: -60px; top: 40px" width="{{ghost.w}}" height="{{ghost.h}}" viewBox="{{mk.vb}}" aria-hidden="true"><g fill="#151B21"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g></svg>
+<svg style="position: relative" width="{{slide.w}}" height="{{slide.h}}" viewBox="{{slide.vb}}" role="img" aria-label="Megasolar"><g transform="{{slide.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{slide.wt}}" d="{{word}}" fill="#FFFFFF"></path></svg>
+<div style="position: relative; display: flex; flex-direction: column; gap: 14px">
+<div class="sx" style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: {{accent}}">Q3 2026 · Portfolio review</div>
+<div class="sx" style="max-width: 560px; font-size: 34px; letter-spacing: -0.015em; line-height: 1.12; color: #FFFFFF">Output up 18% across 130 sites.</div>
+</div>
+<div class="mono" style="position: absolute; right: 40px; bottom: 34px; font-size: 12px; color: #5B6570">01</div>
+</div>
+
+<div style="border-radius: 20px; background: #3A424B; display: flex; align-items: center; justify-content: center">
+<div style="position: relative; width: 300px; box-sizing: border-box; border-radius: 10px; background: {{accent}}; padding: 26px 26px 22px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35)">
+<div style="position: absolute; left: 9px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: rgba(12, 16, 20, 0.35)"></div>
+<div style="position: absolute; right: 9px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: rgba(12, 16, 20, 0.35)"></div>
+<div style="position: absolute; left: 9px; bottom: 9px; width: 7px; height: 7px; border-radius: 50%; background: rgba(12, 16, 20, 0.35)"></div>
+<div style="position: absolute; right: 9px; bottom: 9px; width: 7px; height: 7px; border-radius: 50%; background: rgba(12, 16, 20, 0.35)"></div>
+<svg width="{{plate.w}}" height="{{plate.h}}" viewBox="{{plate.vb}}" role="img" aria-label="Megasolar"><g transform="{{plate.mt}}" fill="#0C1014"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{plate.wt}}" d="{{word}}" fill="#0C1014"></path></svg>
+<div style="margin: 16px 0 12px; height: 2px; background: #0C1014"></div>
+<div class="mono" style="display: grid; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 4px; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase"><span>Site ID</span><span>MS-0142</span><span>Capacity</span><span>1.2 MWp</span><span>Commissioned</span><span>2026-03</span></div>
+</div>
+</div>
+
+<div style="border-radius: 20px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 0 28px">
+<div style="width: 100%; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; color: #5B6570">Thanks, talk soon.</div>
+<div style="padding-left: 14px; border-left: 3px solid {{accent}}; display: flex; flex-direction: column; gap: 3px">
+<div style="font-size: 15px; font-weight: 600">Alex Rivera</div>
+<div style="font-size: 13px; color: #5B6570">Head of Partnerships</div>
+</div>
+<svg width="{{sig.w}}" height="{{sig.h}}" viewBox="{{sig.vb}}" role="img" aria-label="Megasolar"><g transform="{{sig.mt}}" fill="{{accent}}"><path d="{{mk.p1}}"></path><path d="{{mk.p2}}"></path><path d="{{mk.p3}}"></path><path d="{{mk.p4}}"></path></g><path transform="{{sig.wt}}" d="{{word}}" fill="#0C1014"></path></svg>
+<div class="mono" style="font-size: 11px; line-height: 17px; color: #5B6570">+1 555 014 2290<br>megasolar.com</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFD12E","options":["#FFD12E","#EDBD1E","#3BE083","#C4F24A"]},"$preview":{"width":1600,"height":1140}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#FFD12E';
+    const mk = __MARK__;
+    const sm = __SM__;
+    const v = __V42__;
+__COMMON__
+    const h1 = [38, 52, 66, 80, 92, 100, 96, 88, 74, 60, 46, 34];
+    const h2 = [30, 34, 42, 55, 63, 72, 85, 92, 100, 97, 90, 83, 76, 70, 64, 58, 61, 66, 74, 80, 71, 56, 44, 36];
+    return {
+      accent, mk, sm, word: v.word.d,
+      nav: lockupMark(v, 1.35, 22), soc: lockup(v, 1.35, 400, 54), dash: lockupMark(v, 1.35, 17),
+      card: lockup(v, 1.35, 220, 30), slide: lockupMark(v, 1.35, 22), plate: lockup(v, 1.35, 248, 40), sig: lockupMark(v, 1.35, 16),
+      ghost: { w: 420, h: r1(420 / R) },
+      bars: h1.map((h) => ({ h: h + '%' })),
+      bars2: h2.map((h, i) => ({ h: h + '%', c: i === 8 ? accent : '#2A3440' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
