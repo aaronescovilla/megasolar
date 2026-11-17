@@ -1,119 +1,87 @@
-// Shared pieces for the document standard boards: A4 sheets, letterhead, footers, clause and form parts.
+// Shared pieces for the document standard boards: A4 sheets, headers, feet, clauses, tables and forms.
+// A document is type on white paper. The only colour is the logo; there are no chips, tints or labels in capitals.
 // Sizes are CSS px at 96 px per inch: 1 mm = 3.78 px, 1 pt = 4/3 px.
 const L = require('../kit2/lib.js');
-const { A, INK, SLATE, TEXT2, MONO, SX, UI, LEAN } = L;
+const { A, INK, SLATE, UI, SX } = L;
 
 const W = 794, H = 1123;        // A4 portrait
 const MX = 94;                  // side margins, 25 mm
-const RULE = '#A9B1BA';         // neutral-400: the lightest hairline that still prints
-const BLANK = '{{blank}}';      // highlight behind unfilled blanks (solar-100), switched by the "blanks" tweak
-const CAPS = `${MONO}; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: ${SLATE}`;
-const EYEBROW = `${SX}; font-size: 12px; line-height: 16px; letter-spacing: 0.12em; text-transform: uppercase; color: ${SLATE}`;
+const HAIR = '#C9CED4';         // neutral-300: hairlines between table rows
+const BODY = 'font-size: 14.67px; line-height: 21.33px';                    // 11 pt on 16 pt
+const SMALL = `font-size: 12px; line-height: 16px; color: ${SLATE}`;       // 9 pt
+const NUM = 'font-variant-numeric: tabular-nums';
+const COL = 40;                 // hanging column for clause numbers
 
-// Every [bracketed] blank gets the highlight, so nothing unfilled can be missed before signing.
-const fill = (s) => s.replace(/\[([^\]]+)\]/g, (m, t) => `<span style="background: ${BLANK}; border-radius: 2px; padding: 0 2px">[${t}]</span>`);
+// A peso sign stays on the same line as the amount that follows it.
+const keep = (t) => t.replace(/₱\[[^\]]+\]/g, (m) => `<span style="white-space: nowrap">${m}</span>`);
+const stack = (parts, gap) => `<div style="display: flex; flex-direction: column; gap: ${gap}px">\n${parts.join('\n')}\n</div>`;
 
-// Leaning chip, as on the brand kit pages. Ink on Solar Yellow by default.
-const chip = (text, o = {}) => `<div style="flex: none; height: 22px; padding: 0 ${o.px ?? 10}px; border-radius: 4px; background: ${o.bg || A}; ${o.border ? `box-shadow: inset 0 0 0 1.5px ${o.border}; ` : ''}transform: skewX(-${LEAN}); display: flex; align-items: center; justify-content: center"><div style="transform: skewX(${LEAN}); ${MONO}; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.04em; color: ${o.fg || INK}; white-space: nowrap">${text}</div></div>`;
+// Top right of every sheet: the document reference, and on a first page a second line such as the status.
+const refBlock = (ref, note) => `<div style="display: flex; flex-direction: column; align-items: flex-end; ${SMALL}; ${NUM}"><div style="color: ${INK}; font-weight: 500">${ref}</div>${note ? `<div>${note}</div>` : ''}</div>`;
+// First sheet: the full logo, top left, 46 mm wide.
+const headFirst = (ref, note) => `<div style="flex: none; height: 34px; display: flex; align-items: flex-start; justify-content: space-between">${L.lockup(14, A, INK)}${ref ? refBlock(ref, note) : ''}</div>`;
+// Later sheets: the symbol alone, in the same place.
+const headNext = (ref) => `<div style="flex: none; height: 34px; display: flex; align-items: flex-start; justify-content: space-between">${L.symbol(16, A, { small: true })}${refBlock(ref)}</div>`;
 
-// The header rule: an Ink line carrying one leaning Solar Yellow tab.
-const headRule = `<div style="position: relative; flex: none; height: 9px"><div style="position: absolute; left: 3px; top: 0; width: 60px; height: 8px; background: ${A}; transform: skewX(-${LEAN})"></div><div style="position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; background: ${INK}"></div></div>`;
-
-// First sheet: the full logo, top left, 49 mm wide.
-const headFirst = (right = '') => `<div style="flex: none; display: flex; flex-direction: column; gap: 22px">
-<div style="height: 30px; display: flex; align-items: flex-start; justify-content: space-between">${L.lockup(15, A, INK)}${right}</div>
-${headRule}
+const foot = (cells) => `<div style="flex: none; border-top: 1px solid ${SLATE}; padding-top: 10px; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; ${SMALL}; ${NUM}">
+${cells.join('\n')}
 </div>`;
-// Continuation sheets: the symbol and the document reference.
-const headNext = (ref) => `<div style="flex: none; display: flex; flex-direction: column; gap: 14px">
-<div style="height: 18px; display: flex; align-items: center; justify-content: space-between">${L.symbol(16, A, { small: true })}<div style="${MONO}; font-size: 12px; line-height: 16px; color: ${SLATE}">${ref}</div></div>
-${headRule}
-</div>`;
-
-const pager = (n, total) => `<div style="flex: none; display: flex; align-items: center; gap: 8px">${chip(n)}<span style="${MONO}; font-size: 12px; line-height: 16px; color: ${SLATE}">/ ${total}</span></div>`;
-
-// Foot of a first letter sheet: the registered company details.
-const footCompany = (n, total) => `<div style="flex: none; border-top: 1px solid ${RULE}; padding-top: 12px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr) minmax(0, 1fr) auto; column-gap: 20px; align-items: start; font-size: 12px; line-height: 17px; color: ${TEXT2}">
-<div style="display: flex; flex-direction: column"><div style="font-weight: 600; color: ${INK}">${fill('[Registered business name]')}</div><div>${fill('Reg. no. [number]')}</div><div>${fill('TIN [number]')}</div></div>
-<div style="display: flex; flex-direction: column"><div>${fill('[Street address]')}</div><div>${fill('[City, province]')}</div><div>${fill('[Postal code], Philippines')}</div></div>
-<div style="display: flex; flex-direction: column"><div>${fill('[Phone]')}</div><div>${fill('[Email]')}</div><div>${fill('[Website]')}</div></div>
-${pager(n, total)}
-</div>`;
-// Foot of every other sheet: reference on the left, page number on the right. Agreements add initials boxes.
-const initialBox = (who) => `<div style="display: flex; align-items: center; gap: 6px"><span>${who}</span><div style="width: 44px; height: 22px; box-sizing: border-box; border: 1px solid ${INK}; border-radius: 4px"></div></div>`;
-const initials = (a, b) => `<div style="display: flex; align-items: center; gap: 12px; white-space: nowrap"><span>Initials</span>${initialBox(a)}${initialBox(b)}</div>`;
-const footDoc = ({ ref, mid = '', n, total }) => `<div style="flex: none; border-top: 1px solid ${RULE}; padding-top: 12px; height: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 12px; line-height: 16px; color: ${SLATE}">
-<div style="${MONO}; white-space: nowrap">${ref}</div>
-${mid}
-${pager(n, total)}
-</div>`;
+const page = (n, total) => `<div style="white-space: nowrap">Page ${n} of ${total}</div>`;
+const initialLine = (who) => `<div style="display: flex; align-items: flex-end; gap: 6px"><span>${who}</span><div style="width: 52px; height: 15px; border-bottom: 1px solid ${INK}"></div></div>`;
+const initials = (a, b) => `<div style="display: flex; align-items: flex-end; gap: 16px; white-space: nowrap"><span>Initials</span>${initialLine(a)}${initialLine(b)}</div>`;
+// Foot of a first letter sheet: the registered company details in three columns.
+const footCompany = () => foot([
+  `<div style="display: flex; flex-direction: column"><div style="font-weight: 600; color: ${INK}">[Registered business name]</div><div>Registration no. [number]</div><div>TIN [number]</div></div>`,
+  `<div style="display: flex; flex-direction: column"><div>[Street address]</div><div>[City, province, postal code]</div><div>Philippines</div></div>`,
+  `<div style="display: flex; flex-direction: column"><div>[Phone]</div><div>[Email]</div><div>[Website]</div></div>`
+]);
+const footDoc = ({ title, mid, n, total }) => foot([`<div>${title}</div>`, mid || '', page(n, total)].filter(Boolean));
 
 // One A4 sheet. White, because the sheet of paper is the ground.
-const sheet = ({ head, body, foot, gapTop = 38 }) => `<div style="position: relative; overflow: hidden; width: ${W}px; height: ${H}px; box-sizing: border-box; padding: 57px ${MX}px 45px; display: flex; flex-direction: column; background: #FFFFFF; ${UI}; color: ${INK}">
+const sheet = ({ head, body, foot: f, gapTop = 52 }) => `<div style="position: relative; overflow: hidden; width: ${W}px; height: ${H}px; box-sizing: border-box; padding: 60px ${MX}px 49px; display: flex; flex-direction: column; background: #FFFFFF; ${UI}; color: ${INK}">
 ${head}
 <div style="flex: 1; min-height: 0; padding: ${gapTop}px 0 20px; display: flex; flex-direction: column">
 ${body}
 </div>
-${foot}
+${f}
 </div>`;
 
-// Title block and document control strip.
-const titleBlock = ({ eyebrow, title, sub }) => `<div style="display: flex; flex-direction: column; gap: 8px">
-<div style="${EYEBROW}">${eyebrow}</div>
-<h1 style="margin: 0; ${SX}; font-size: 29px; line-height: 36px; letter-spacing: -0.02em; text-wrap: balance">${title}</h1>
-<div style="font-size: 16px; line-height: 24px; color: ${TEXT2}">${fill(sub)}</div>
+// Document title: the one place the display face appears, with a single rule under it.
+const title = (text) => `<h1 style="margin: 0; padding-bottom: 14px; border-bottom: 1px solid ${INK}; ${SX}; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">${text}</h1>`;
+
+// Clauses. Numbers hang in a 40 px column in the text face; headings and text share the same left edge.
+const h2 = (num, text, o = {}) => `<h2 style="margin: 0; padding-top: ${o.first ? 0 : 10}px; display: grid; grid-template-columns: ${COL}px minmax(0, 1fr); font-size: 16px; line-height: 22px; font-weight: 600; ${NUM}"><span>${num}</span><span>${text}</span></h2>`;
+const letters = 'abcdefghijklmnopqrstuvwxyz';
+const list = (items, from = 0) => `<div style="display: flex; flex-direction: column; gap: 4px; padding-top: 4px">
+${items.map((t, i) => `<div style="display: grid; grid-template-columns: 28px minmax(0, 1fr); ${BODY}"><div>(${letters[from + i]})</div><div style="text-wrap: pretty">${keep(t)}</div></div>`).join('\n')}
 </div>`;
-const control = (cells) => `<div style="display: grid; grid-template-columns: repeat(${cells.length}, minmax(0, 1fr)); column-gap: 16px; padding: 10px 0; border-top: 1.5px solid ${INK}; border-bottom: 1px solid ${RULE}">
-${cells.map(([k, v, raw]) => `<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px"><div style="${CAPS}">${k}</div>${raw ? v : `<div style="${MONO}; font-size: 14px; line-height: 22px; font-weight: 500">${fill(v)}</div>`}</div>`).join('\n')}
+const clause = (num, lead, text, extra = '') => `<div style="display: grid; grid-template-columns: ${COL}px minmax(0, 1fr); ${BODY}">
+<div style="${NUM}">${num}</div>
+<div style="display: flex; flex-direction: column"><div style="text-wrap: pretty">${lead ? `<span style="font-weight: 600">${lead}</span> ` : ''}${text}</div>${extra}</div>
+</div>`;
+// A list carried over from the page before, at the clause text's indent.
+const carried = (inner) => `<div style="display: grid; grid-template-columns: ${COL}px minmax(0, 1fr)"><div></div>${inner}</div>`;
+const para = (text) => `<p style="margin: 0; ${BODY}; text-wrap: pretty">${text}</p>`;
+
+// Signature block: who signs, room to sign over a rule, then name, position and date.
+const signature = (label, lines, o = {}) => `<div style="display: flex; flex-direction: column; ${BODY}">
+${label ? `<div style="font-weight: 600">${label}</div>` : ''}
+<div style="height: ${o.space ?? 50}px; border-bottom: 1px solid ${INK}"></div>
+<div style="padding-top: 6px; display: flex; flex-direction: column">${lines.map((t) => `<div>${t}</div>`).join('')}</div>
 </div>`;
 
-// Clause text: numbers hang in Geist Mono, the lead-in is Geist SemiBold, the text is Geist Regular 12 pt on 18 pt.
-const BODY = 'font-size: 16px; line-height: 24px; text-wrap: pretty';
-const h2 = (text, o = {}) => `<h2 style="margin: 0; padding-top: ${o.first ? 0 : 16}px; ${SX}; font-size: 17px; line-height: 24px; letter-spacing: -0.01em">${text}</h2>`;
-const marker = `<div style="width: 5px; height: 10px; margin: 7px 0 0 3px; background: ${INK}; transform: skewX(-${LEAN})"></div>`;
-const list = (items, ordered) => `<div style="display: flex; flex-direction: column; gap: 6px; padding-top: 6px">
-${items.map((t, i) => `<div style="display: grid; grid-template-columns: 30px minmax(0, 1fr)">${ordered ? `<div style="${MONO}; font-size: 13px; line-height: 24px; color: ${SLATE}">${i + 1}.</div>` : marker}<div style="${BODY}">${fill(t)}</div></div>`).join('\n')}
-</div>`;
-const clause = (num, lead, text, extra = '') => `<div style="display: grid; grid-template-columns: 46px minmax(0, 1fr)">
-<div style="${MONO}; font-size: 13px; line-height: 24px; color: ${SLATE}">${num}</div>
-<div style="display: flex; flex-direction: column"><div style="${BODY}"><span style="font-weight: 600">${lead}</span> ${fill(text)}</div>${extra}</div>
-</div>`;
-const clauses = (parts) => `<div style="display: flex; flex-direction: column; gap: 12px">
-${parts.join('\n')}
-</div>`;
-const para = (text) => `<p style="margin: 0; ${BODY}">${fill(text)}</p>`;
-
-// Signature block: space to sign, a rule, then who and when.
-const signature = (label, lines, o = {}) => `<div style="display: flex; flex-direction: column">
-<div style="${CAPS}">${label}</div>
-<div style="height: ${o.space ?? 52}px; border-bottom: 1px solid ${INK}"></div>
-<div style="padding-top: 6px; display: flex; flex-direction: column; font-size: 14px; line-height: 20px; color: ${TEXT2}">${lines.map((t, i) => `<div${i === 0 ? ` style="font-weight: 600; color: ${INK}"` : ''}>${fill(t)}</div>`).join('')}</div>
+// Table: a header between two rules, hairlines between rows, a closing rule.
+const table = (cols, head, rows) => `<div style="display: flex; flex-direction: column; font-size: 13.33px; line-height: 19px; ${NUM}; border-bottom: 1px solid ${INK}">
+<div style="display: grid; grid-template-columns: ${cols}; column-gap: 16px; padding: 7px 0; border-top: 1px solid ${INK}; border-bottom: 1px solid ${INK}; font-weight: 600">${head.map((t) => `<div>${t}</div>`).join('')}</div>
+${rows.map((r, i) => `<div style="display: grid; grid-template-columns: ${cols}; column-gap: 16px; padding: 7px 0${i ? `; border-top: 1px solid ${HAIR}` : ''}">${r.map((t) => `<div>${keep(t)}</div>`).join('')}</div>`).join('\n')}
 </div>`;
 
-// Form field: a caps label over a ruled line.
-const field = (label, value, o = {}) => `<div style="${o.span ? 'grid-column: 1 / -1; ' : ''}display: flex; flex-direction: column; gap: 2px">
-<div style="${CAPS}">${label}</div>
-<div style="height: ${o.h ?? 26}px; box-sizing: border-box; border-bottom: 1px solid ${INK}; font-size: 14px; line-height: 24px">${fill(value)}</div>
+// Form: ruled cells with a small label at the top of each, left blank to be filled in.
+const cell = (label, o = {}) => `<div style="${o.span ? 'grid-column: 1 / -1; ' : ''}box-sizing: border-box; height: ${o.h ?? 50}px; padding: 6px 8px; border-right: 1px solid ${INK}; border-bottom: 1px solid ${INK}; ${SMALL}">${label}</div>`;
+const formGrid = (cells) => `<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid ${INK}; border-left: 1px solid ${INK}">
+${cells.join('\n')}
 </div>`;
 
-// Table: caps header on an Ink rule, hairlines between rows.
-const table = (cols, head, rows) => `<div style="display: flex; flex-direction: column; font-size: 14px; line-height: 20px">
-<div style="display: grid; grid-template-columns: ${cols}; column-gap: 16px; padding: 0 0 8px; border-bottom: 1.5px solid ${INK}">${head.map((t) => `<div style="${CAPS}">${t}</div>`).join('')}</div>
-${rows.map((r) => `<div style="display: grid; grid-template-columns: ${cols}; column-gap: 16px; padding: 9px 0; border-bottom: 1px solid ${RULE}">${r.map((t, i) => `<div style="${i === 1 ? `${MONO}; font-size: 13px; color: ${TEXT2}` : i === 0 ? 'font-weight: 500' : ''}">${fill(t)}</div>`).join('')}</div>`).join('\n')}
-</div>`;
+const doc = ({ title: t, body, w = W, h = H }) => L.doc({ title: t, w, h, body });
 
-// Document file with the two tweaks every document board shares: the accent and the blanks highlight.
-const doc = ({ title, body, w = W, h = H }) => L.doc({
-  title, w, h, body,
-  props: { blanks: { editor: 'boolean', default: true } },
-  logic: `class Component extends DCLogic {
-  renderVals() {
-    return {
-      accent: this.props.accent ?? '${L.SOLAR}',
-      blank: (this.props.blanks ?? true) ? '${L.S[100]}' : 'transparent'
-    };
-  }
-}`
-});
-
-module.exports = { L, W, H, MX, RULE, CAPS, EYEBROW, BODY, fill, chip, headRule, headFirst, headNext, pager, footCompany, footDoc, initials, sheet, titleBlock, control, h2, list, clause, clauses, para, signature, field, table, doc };
+module.exports = { L, W, H, MX, HAIR, BODY, SMALL, NUM, stack, headFirst, headNext, footCompany, footDoc, initials, sheet, title, h2, list, clause, carried, para, signature, table, cell, formGrid, doc };
