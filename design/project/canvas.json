@@ -315,7 +315,7 @@
     },
     "DocAgreement1.dc.html": {
       "h": 1123,
-      "title": "Agreement · first page",
+      "title": "Project Foreman Agreement · page 1",
       "w": 794,
       "x": 1908,
       "y": 1420,
@@ -323,7 +323,7 @@
     },
     "DocAgreement2.dc.html": {
       "h": 1123,
-      "title": "Agreement · inner page",
+      "title": "Project Foreman Agreement · page 2",
       "w": 794,
       "x": 2782,
       "y": 1420,
@@ -331,7 +331,7 @@
     },
     "DocAgreement3.dc.html": {
       "h": 1123,
-      "title": "Agreement · signatures and schedule",
+      "title": "Project Foreman Agreement · page 3",
       "w": 794,
       "x": 3656,
       "y": 1420,
@@ -339,7 +339,7 @@
     },
     "DocForm.dc.html": {
       "h": 1123,
-      "title": "Form · project assignment order",
+      "title": "Form · project order",
       "w": 794,
       "x": 4690,
       "y": 1420,
@@ -494,7 +494,7 @@
     "d2": {
       "kind": "title1",
       "maxW": 2542,
-      "text": "Agreement format",
+      "text": "Project Foreman Agreement",
       "x": 1908,
       "y": 1120,
       "w": 240,

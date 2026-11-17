@@ -41,11 +41,11 @@ ${spec('Foot', '13 mm from bottom')}
 </div>`, 300)}
 ${column('Type', `<div style="display: flex; flex-direction: column; border-bottom: 1px solid ${LINE}">
 ${typeRow('Document title', 'Saira Expanded SemiBold, 18 pt', `<div style="${SX}; font-size: 24px; line-height: 30px; letter-spacing: -0.01em">Project Foreman Agreement</div>`)}
-${typeRow('Section heading', 'Geist SemiBold, 12 pt', `<div style="font-size: 16px; line-height: 22px; font-weight: 600">2. &nbsp; Role and duties</div>`)}
+${typeRow('Section heading', 'Geist SemiBold, 12 pt', `<div style="font-size: 16px; line-height: 22px; font-weight: 600">2. &nbsp; Pay</div>`)}
 ${typeRow('Text', 'Geist Regular, 11 on 16 pt', `<div style="${P.BODY}">The Company installs solar power systems one project at a time.</div>`)}
-${typeRow('Clause lead-in', 'Geist SemiBold, 11 pt', `<div style="${P.BODY}"><span style="font-weight: 600">Assignment Orders.</span> Each project is covered by one.</div>`)}
-${typeRow('Tables', 'Geist, 10 pt, tabular numerals', `<div style="font-size: 13.33px; line-height: 19px; ${P.NUM}">Commitment Period &nbsp; 5.5 &nbsp; [18] months</div>`)}
-${typeRow('Reference and foot', 'Geist Regular, 9 pt', `<div style="${P.SMALL}; ${P.NUM}">${REF} &nbsp; Page 2 of 12</div>`)}
+${typeRow('Clause', 'Number hangs 40 px left of the text', `<div style="${P.BODY}">2.2 &nbsp;&nbsp; A project is completed when the client signs the turnover form.</div>`)}
+${typeRow('Tables', 'Geist, 10 pt, tabular numerals', `<div style="font-size: 13.33px; line-height: 19px; ${P.NUM}">Daily rate &nbsp; ₱[amount] &nbsp; 15th and last day</div>`)}
+${typeRow('Reference and foot', 'Geist Regular, 9 pt', `<div style="${P.SMALL}; ${P.NUM}">${REF} &nbsp; Page 2 of 3</div>`)}
 </div>
 <div style="font-size: 14px; line-height: 21px; color: ${TEXT2}; text-wrap: pretty">All text is Ink on white. Geist carries everything except the title. Nothing is set in capitals, in a code face or in colour.</div>`)}
 ${column('Numbering', `<div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 6px">

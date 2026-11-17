@@ -9,8 +9,8 @@ const boards = {
   DocLetter1: letter.first,
   DocLetter2: letter.next,
   DocAgreement1: agreement.first,
-  DocAgreement2: agreement.inner,
-  DocAgreement3: agreement.last,
+  DocAgreement2: agreement.second,
+  DocAgreement3: agreement.third,
   DocForm: require('./form.js')
 };
 fs.mkdirSync(out, { recursive: true });

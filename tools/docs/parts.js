@@ -57,7 +57,7 @@ ${items.map((t, i) => `<div style="display: grid; grid-template-columns: 28px mi
 </div>`;
 const clause = (num, lead, text, extra = '') => `<div style="display: grid; grid-template-columns: ${COL}px minmax(0, 1fr); ${BODY}">
 <div style="${NUM}">${num}</div>
-<div style="display: flex; flex-direction: column"><div style="text-wrap: pretty">${lead ? `<span style="font-weight: 600">${lead}</span> ` : ''}${text}</div>${extra}</div>
+<div style="display: flex; flex-direction: column"><div style="text-wrap: pretty">${lead ? `<span style="font-weight: 600">${lead}</span> ` : ''}${keep(text)}</div>${extra}</div>
 </div>`;
 // A list carried over from the page before, at the clause text's indent.
 const carried = (inner) => `<div style="display: grid; grid-template-columns: ${COL}px minmax(0, 1fr)"><div></div>${inner}</div>`;
