@@ -70,4 +70,7 @@ const third = () => P.doc({
   body: P.sheet({ head: P.headNext(REF), foot: foot(3), body: P.stack([P.stack(top(blocks.slice(BREAKS[1])), 9), signatures], 22) })
 });
 
-module.exports = { first, second, third, blocks };
+// True while any [bracketed] blank is left in the text.
+const blanks = /\[[^\]]+\]/.test(blocks.join('') + signatures);
+
+module.exports = { first, second, third, blocks, blanks };
