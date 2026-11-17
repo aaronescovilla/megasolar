@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Downloads the variable Saira fonts (SIL Open Font License) that saira_build.py reads.
+# Downloads the variable Saira, Geist and Geist Mono fonts (SIL Open Font License) that the build scripts read.
 # Run from the repository root: bash tools/fetch-fonts.sh
 set -euo pipefail
 mkdir -p tools/fonts
@@ -14,4 +14,11 @@ url_for() { # $1 = normal | italic ; prints the latin-subset woff2 URL
 }
 curl -fsS -o tools/fonts/saira.woff2 "$(url_for normal)"
 curl -fsS -o tools/fonts/saira-italic.woff2 "$(url_for italic)"
+
+# Geist and Geist Mono (variable weight), used by the design system build.
+for fam in "Geist:wght@100..900 geist" "Geist+Mono:wght@100..900 geistmono"; do
+  set -- $fam
+  CSS=$(curl -fsS -A "$UA" "https://fonts.googleapis.com/css2?family=$1&display=swap")
+  curl -fsS -o "tools/fonts/$2.woff2" "$(url_for normal)"
+done
 ls -l tools/fonts

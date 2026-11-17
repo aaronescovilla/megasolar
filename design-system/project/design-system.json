@@ -1,0 +1,147 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-17T05:04:03Z"
+  },
+  "title": "Megasolar",
+  "namespace": "Megasolar",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "megasolar-logo.svg",
+        "megasolar-logo-reversed.svg",
+        "megasolar-logo-black.svg",
+        "megasolar-logo-white.svg",
+        "megasolar-logo-stacked.svg",
+        "megasolar-logo-stacked-reversed.svg",
+        "megasolar-symbol.svg",
+        "megasolar-symbol-black.svg",
+        "megasolar-symbol-white.svg",
+        "megasolar-symbol-small.svg",
+        "megasolar-symbol-small-black.svg",
+        "megasolar-wordmark.svg",
+        "megasolar-wordmark-white.svg",
+        "megasolar-app-icon.svg",
+        "megasolar-app-icon-small.svg",
+        "megasolar-avatar.svg"
+      ],
+      "files": {
+        "megasolar-logo.svg": {
+          "name": "megasolar-logo.svg",
+          "blob": "d36c485e136d093f156fe62b413b262f",
+          "size": 4362,
+          "type": "image/svg+xml"
+        },
+        "megasolar-logo-reversed.svg": {
+          "name": "megasolar-logo-reversed.svg",
+          "blob": "f6f7ebbdcb2b7c2695e851e598f1f75a",
+          "size": 4362,
+          "type": "image/svg+xml"
+        },
+        "megasolar-logo-black.svg": {
+          "name": "megasolar-logo-black.svg",
+          "blob": "f46c565a7d1cc59e551620ae955e9f25",
+          "size": 4362,
+          "type": "image/svg+xml"
+        },
+        "megasolar-logo-white.svg": {
+          "name": "megasolar-logo-white.svg",
+          "blob": "9581096d5bc7f0fd54445276c709c15d",
+          "size": 4362,
+          "type": "image/svg+xml"
+        },
+        "megasolar-logo-stacked.svg": {
+          "name": "megasolar-logo-stacked.svg",
+          "blob": "08178e5b34abc0b5c48a20d9e1f6731b",
+          "size": 4381,
+          "type": "image/svg+xml"
+        },
+        "megasolar-logo-stacked-reversed.svg": {
+          "name": "megasolar-logo-stacked-reversed.svg",
+          "blob": "1a09f4fb4492bc57bd6e31b4f44c6b75",
+          "size": 4381,
+          "type": "image/svg+xml"
+        },
+        "megasolar-symbol.svg": {
+          "name": "megasolar-symbol.svg",
+          "blob": "c876813749e383bbad254dd656d979b6",
+          "size": 1395,
+          "type": "image/svg+xml"
+        },
+        "megasolar-symbol-black.svg": {
+          "name": "megasolar-symbol-black.svg",
+          "blob": "eba85e738388e19ed19f40b1a71e28b3",
+          "size": 1395,
+          "type": "image/svg+xml"
+        },
+        "megasolar-symbol-white.svg": {
+          "name": "megasolar-symbol-white.svg",
+          "blob": "0a2c9aa8c465aab687d83b43ba492cfa",
+          "size": 1395,
+          "type": "image/svg+xml"
+        },
+        "megasolar-symbol-small.svg": {
+          "name": "megasolar-symbol-small.svg",
+          "blob": "816ebac772b35a288fbb363b0bcd3405",
+          "size": 1433,
+          "type": "image/svg+xml"
+        },
+        "megasolar-symbol-small-black.svg": {
+          "name": "megasolar-symbol-small-black.svg",
+          "blob": "79185b52eab880e5189d92632d2312c7",
+          "size": 1433,
+          "type": "image/svg+xml"
+        },
+        "megasolar-wordmark.svg": {
+          "name": "megasolar-wordmark.svg",
+          "blob": "252da9b186867e2a491ad0d00003128f",
+          "size": 3002,
+          "type": "image/svg+xml"
+        },
+        "megasolar-wordmark-white.svg": {
+          "name": "megasolar-wordmark-white.svg",
+          "blob": "0519fee5558a593df6a7c8cac29dfb73",
+          "size": 3002,
+          "type": "image/svg+xml"
+        },
+        "megasolar-app-icon.svg": {
+          "name": "megasolar-app-icon.svg",
+          "blob": "c1158e1c7afa8a554af303a22e3f5ca5",
+          "size": 1500,
+          "type": "image/svg+xml"
+        },
+        "megasolar-app-icon-small.svg": {
+          "name": "megasolar-app-icon-small.svg",
+          "blob": "3255208dfd9b5b41f545d55aabefedd2",
+          "size": 1539,
+          "type": "image/svg+xml"
+        },
+        "megasolar-avatar.svg": {
+          "name": "megasolar-avatar.svg",
+          "blob": "76cc8aaad2bb754b6158ec0faf9689e8",
+          "size": 1494,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Aaron",
+    "at": "2026-11-17T05:04:03Z",
+    "via": "Claude Code",
+    "note": "Saved the chosen brand kit as a design system."
+  }
+}

@@ -1,0 +1,85 @@
+<!-- @dsCard height=320 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Megasolar</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--ground); color:var(--text); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:320px; overflow:hidden; }
+  /* the composition: a 480-wide box on the right half of the 960 layout, clear of the name */
+  .art { position:absolute; top:0; left:480px; width:480px; height:320px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:320px; }
+  .slab { fill:var(--feature); rx:var(--radius-xl); }
+  .brand { fill:var(--solar); rx:var(--radius-xl); }
+  .tint { fill:var(--solar-200); rx:var(--radius-xl); }
+  .lit { fill:var(--solar); }
+  .dim { fill:var(--neutral-800); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-family:var(--font-display); font-size:72px; line-height:.95; font-weight:600; letter-spacing:-.02em; color:var(--text); }
+  .tag { margin:var(--space-3) 0 0 2px; font-size:14px; line-height:20px; color:var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 320" width="480" height="320">
+<!--
+  blocks      feature slab 400 wide, bled off the top and right edges (the Ink ground the brand lives on) · solar 80x112 · solar-200 80x64 (the tint) — about 40% of 960x320
+  arrangement one tall slab with two satellites stacked on its left, bottoms on one line space-6 above the edge, space-4 gutters
+  pattern     the literal motif, from "the array" and "the pulse": 40 leaning panel cells on the slab, 24 lit in solar as two humps, so two days of output draw the M
+  scales      cells space-6 wide and space-8 tall at a space-2 gap, leaning 1 in 3 (the lean token); block sides in space-4 multiples; corners radius-xl
+-->
+<rect class="slab" x="96" y="-24" width="420" height="320" rx="20"/>
+<rect class="tint" x="0" y="104" width="80" height="64" rx="20"/>
+<rect class="brand" x="0" y="184" width="80" height="112" rx="20"/>
+<polygon class="dim" points="152,152 176,152 186.7,120 162.7,120"/>
+<polygon class="dim" points="184,152 208,152 218.7,120 194.7,120"/>
+<polygon class="lit" points="216,152 240,152 250.7,120 226.7,120"/>
+<polygon class="dim" points="248,152 272,152 282.7,120 258.7,120"/>
+<polygon class="dim" points="280,152 304,152 314.7,120 290.7,120"/>
+<polygon class="dim" points="312,152 336,152 346.7,120 322.7,120"/>
+<polygon class="dim" points="344,152 368,152 378.7,120 354.7,120"/>
+<polygon class="lit" points="376,152 400,152 410.7,120 386.7,120"/>
+<polygon class="dim" points="408,152 432,152 442.7,120 418.7,120"/>
+<polygon class="dim" points="440,152 464,152 474.7,120 450.7,120"/>
+<polygon class="dim" points="138.7,192 162.7,192 173.3,160 149.3,160"/>
+<polygon class="lit" points="170.7,192 194.7,192 205.3,160 181.3,160"/>
+<polygon class="lit" points="202.7,192 226.7,192 237.3,160 213.3,160"/>
+<polygon class="lit" points="234.7,192 258.7,192 269.3,160 245.3,160"/>
+<polygon class="dim" points="266.7,192 290.7,192 301.3,160 277.3,160"/>
+<polygon class="dim" points="298.7,192 322.7,192 333.3,160 309.3,160"/>
+<polygon class="lit" points="330.7,192 354.7,192 365.3,160 341.3,160"/>
+<polygon class="lit" points="362.7,192 386.7,192 397.3,160 373.3,160"/>
+<polygon class="lit" points="394.7,192 418.7,192 429.3,160 405.3,160"/>
+<polygon class="dim" points="426.7,192 450.7,192 461.3,160 437.3,160"/>
+<polygon class="dim" points="125.3,232 149.3,232 160,200 136,200"/>
+<polygon class="lit" points="157.3,232 181.3,232 192,200 168,200"/>
+<polygon class="lit" points="189.3,232 213.3,232 224,200 200,200"/>
+<polygon class="lit" points="221.3,232 245.3,232 256,200 232,200"/>
+<polygon class="dim" points="253.3,232 277.3,232 288,200 264,200"/>
+<polygon class="dim" points="285.3,232 309.3,232 320,200 296,200"/>
+<polygon class="lit" points="317.3,232 341.3,232 352,200 328,200"/>
+<polygon class="lit" points="349.3,232 373.3,232 384,200 360,200"/>
+<polygon class="lit" points="381.3,232 405.3,232 416,200 392,200"/>
+<polygon class="dim" points="413.3,232 437.3,232 448,200 424,200"/>
+<polygon class="lit" points="112,272 136,272 146.7,240 122.7,240"/>
+<polygon class="lit" points="144,272 168,272 178.7,240 154.7,240"/>
+<polygon class="lit" points="176,272 200,272 210.7,240 186.7,240"/>
+<polygon class="lit" points="208,272 232,272 242.7,240 218.7,240"/>
+<polygon class="lit" points="240,272 264,272 274.7,240 250.7,240"/>
+<polygon class="lit" points="272,272 296,272 306.7,240 282.7,240"/>
+<polygon class="lit" points="304,272 328,272 338.7,240 314.7,240"/>
+<polygon class="lit" points="336,272 360,272 370.7,240 346.7,240"/>
+<polygon class="lit" points="368,272 392,272 402.7,240 378.7,240"/>
+<polygon class="lit" points="400,272 424,272 434.7,240 410.7,240"/>
+</svg>
+</div>
+<div class="words">
+<p class="name">Megasolar</p>
+<p class="tag">Solar, run like software.</p>
+</div>
+</div>
+</body>
+</html>

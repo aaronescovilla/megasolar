@@ -12,8 +12,14 @@ The logo is two leaning panels cut by a pulse that draws an M, with the wordmark
 |---|---|
 | `brand/logo/` | The chosen logo. SVG masters for the horizontal, stacked, reversed and one-colour logos, the symbol, the wordmark, the app icon and avatar, plus `favicon.ico`. PNG exports are in `brand/logo/png/`. |
 | `brand/archive/logo-v1/` | The earlier logo, with the same kind of files. Do not use it for new work. |
+| `design-system/` | Source of the Megasolar design system saved on claude.ai: the usage rules (`project/README.md`), tokens, fonts and cover. The logo files it shows are uploads of `brand/logo/`. |
 | `design/project/` | Source of the design canvas: 39 boards (`*.dc.html`) and their layout (`canvas.json`). |
+| `CLAUDE.md` | A short record of the chosen brand that every Claude thread on this repository reads automatically. |
 | `tools/` | Scripts that draw the symbol, outline the Saira wordmark, export the logo files and generate 16 of the boards. `tools/kit2/` builds the chosen brand kit and the before-and-after boards. |
+
+## The design system
+
+The chosen kit is saved as a design system at https://claude.ai/artifact/VYddBFuycDP4GB9xHKKJr4 (private to the owner unless shared). Design threads on the same account can find it and build on it. Its source is in `design-system/`.
 
 ## The design canvas
 
@@ -62,6 +68,10 @@ node tools/raster2.js               # writes brand/logo/png/*.png (needs the pla
 # 2b. Earlier logo, archive only
 node tools/export.js                # writes brand/archive/logo-v1/*.svg
 node tools/raster.js                # writes brand/archive/logo-v1/png/*.png
+
+# 2c. Design system files (publish them to the design system by asking Claude)
+python3 tools/ds_fonts.py           # writes design-system/project/fonts/
+node tools/ds_build.js              # writes tokens.json, README.md, the logo notes and the cover
 
 # 3. Boards (these overwrite the files in design/project/)
 node tools/saira_gen.js             # SairaRefinements, SairaSuite
