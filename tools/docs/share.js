@@ -1,17 +1,24 @@
 // Builds the agreement as one standalone page that can be shared on its own, without the brand canvas.
-// Run from the repository root:  node tools/docs/share.js
-// Writes documents/MS-AGR-2026-001_installation-contractor-agreement.html (published as its own artifact).
+// Run from the repository root:
+//   node tools/docs/share.js                                       the template, into documents/
+//   node tools/docs/share.js documents/values/MS-AGR-2026-001.json  filled in, into documents/filled/
+// A values file holds real names, so documents/values/ and documents/filled/ are not tracked by git.
 const fs = require('fs');
-const agreement = require('./agreement.js');
+const make = require('./agreement.js');
 const L = require('../kit2/lib.js');
 
-const sheets = [agreement.first, agreement.second, agreement.third].map((make) => {
-  const src = make();
+const valuesPath = process.argv[2];
+const values = valuesPath ? JSON.parse(fs.readFileSync(valuesPath, 'utf8')) : {};
+if (values.companyPartyBold) values.companyParty = values.companyParty.replace(values.companyPartyBold, make.B(values.companyPartyBold));
+const agreement = make(values);
+
+const sheets = [agreement.first, agreement.second, agreement.third].map((page) => {
+  const src = page();
   return src.slice(src.indexOf('</helmet>') + 9, src.indexOf('</x-dc>')).replace(/\{\{accent\}\}/g, L.SOLAR).trim();
 });
 const note = agreement.blanks
-  ? `Draft for review. Text in [square brackets] is still to be filled in.`
-  : `Final text. Print on A4, one side only; both parties initial each page and sign the last.`;
+  ? 'Draft for review. Text in [square brackets] is still to be filled in.'
+  : 'Print on A4, one side only. Both parties initial each page and sign the last.';
 
 const html = `<title>Installation Contractor Agreement</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -44,7 +51,8 @@ ${sheets.map((s, i) => `<section class="page" aria-label="Page ${i + 1} of ${she
 })();
 </script>
 `;
-fs.mkdirSync('documents', { recursive: true });
-const out = 'documents/MS-AGR-2026-001_installation-contractor-agreement.html';
+const dir = valuesPath ? 'documents/filled/' : 'documents/';
+fs.mkdirSync(dir, { recursive: true });
+const out = dir + 'MS-AGR-2026-001_installation-contractor-agreement.html';
 fs.writeFileSync(out, html);
-console.log(out, Buffer.byteLength(html));
+console.log(out, Buffer.byteLength(html), agreement.blanks ? 'blanks remain' : 'no blanks');

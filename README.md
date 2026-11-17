@@ -14,7 +14,7 @@ The logo is two leaning panels cut by a pulse that draws an M, with the wordmark
 | `brand/archive/logo-v1/` | The earlier logo, with the same kind of files. Do not use it for new work. |
 | `design-system/` | Source of the Megasolar design system saved on claude.ai: the usage rules (`project/README.md`), tokens, fonts and cover. The logo files it shows are uploads of `brand/logo/`. |
 | `design/project/` | Source of the design canvas: 46 boards (`*.dc.html`) and their layout (`canvas.json`). |
-| `documents/` | Documents set in the draft standard as standalone pages that can be shared on their own. Built by `tools/docs/share.js`. |
+| `documents/` | Document templates set in the draft standard as standalone pages, with their blanks unfilled. Built by `tools/docs/share.js`. The filled-in versions hold real names, so `documents/values/` and `documents/filled/` are kept out of git. |
 | `CLAUDE.md` | A short record of the chosen brand that every Claude thread on this repository reads automatically. |
 | `tools/` | Scripts that draw the symbol, outline the Saira wordmark, export the logo files and generate 23 of the boards. `tools/kit2/` builds the chosen brand kit and the before-and-after boards. `tools/docs/` builds the document standard boards. |
 
@@ -82,7 +82,8 @@ node tools/kit_gen.js               # KitColor, KitType, KitApplications
 node tools/tesla_gen.js             # WordmarksTesla
 node tools/kit2/build.js            # the eight Kit2 boards and the two BeforeAfter boards
 node tools/docs/build.js            # the seven Doc boards (document standard, draft)
-node tools/docs/share.js            # the agreement as one standalone page in documents/
+node tools/docs/share.js            # the agreement template as one standalone page in documents/
+node tools/docs/share.js documents/values/MS-AGR-2026-001.json   # the same, filled in, into documents/filled/
 ```
 
 Each generator takes an optional output folder, for example `node tools/kit_gen.js /tmp/out/`, to build without overwriting. The `*_t.js` scripts and `tools/kit2/check.js` run a board's logic with different tweak settings and report missing values.

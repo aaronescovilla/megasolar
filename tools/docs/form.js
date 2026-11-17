@@ -18,6 +18,7 @@ module.exports = () => P.doc({
         P.cell('Scope of work', { span: true, h: 84 }),
         P.cell('Start date'), P.cell('Agreed finish date'),
         P.cell('Base, at ₱3.00 per watt (₱)'), P.cell('Bonus, at ₱0.50 per watt (₱)'),
+        P.cell('When the base is paid', { span: true }),
         P.cell('Special conditions', { span: true, h: 84 })
       ]),
       P.para('The Contractor takes this job on the terms of the Installation Contractor Agreement. The bonus is paid only if the job is finished by the agreed date and needs no callback.')

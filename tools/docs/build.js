@@ -3,7 +3,7 @@
 //   node tools/docs/build.js /tmp/out/  writes somewhere else
 const fs = require('fs');
 const out = process.argv[2] || 'design/project/';
-const letter = require('./letter.js'), agreement = require('./agreement.js');
+const letter = require('./letter.js'), agreement = require('./agreement.js')(); // the template, blanks unfilled
 const boards = {
   DocStandard: require('./standard.js'),
   DocLetter1: letter.first,
