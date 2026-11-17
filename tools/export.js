@@ -1,6 +1,6 @@
 const fs = require('fs');
 const P = 'design/project/';
-const OUT = 'brand/logo/';
+const OUT = 'brand/archive/logo-v1/'; // the earlier logo, kept for reference
 const ev = (src) => new Function('return (' + src + ')')();
 const mk = ev(fs.readFileSync(P + 'WordmarksExtended.dc.html', 'utf8').match(/const mark = (\{[\s\S]*?\n    \});/)[1]);
 const sm = ev(fs.readFileSync(P + 'WordmarksTech.dc.html', 'utf8').match(/const sm = (\{[\s\S]*?\n    \});/)[1]);

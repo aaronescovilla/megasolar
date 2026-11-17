@@ -1,8 +1,8 @@
-// PNG exports of the polished logo. Run from the repository root: node tools/raster2.js
+// PNG exports of the chosen logo. Run from the repository root: node tools/raster2.js
 // Needs the playwright package and its Chromium.
 const { chromium } = require('playwright');
 const fs = require('fs');
-const D = 'brand/logo-v2/';
+const D = 'brand/logo/';
 const jobs = [
   ['megasolar-app-icon.svg', 1024, 'megasolar-app-icon-1024.png'],
   ['megasolar-app-icon.svg', 512, 'megasolar-app-icon-512.png'],

@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
-const D = 'brand/logo/';
+const D = 'brand/archive/logo-v1/';
 const jobs = [
   ['megasolar-app-icon.svg', 1024, 1024, 'megasolar-app-icon-1024.png'],
   ['megasolar-app-icon.svg', 512, 512, 'megasolar-app-icon-512.png'],

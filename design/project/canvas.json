@@ -179,7 +179,7 @@
     },
     "Kit2Overview.dc.html": {
       "h": 1000,
-      "title": "After · 01 Overview",
+      "title": "Final · 01 Overview",
       "w": 1600,
       "x": 0,
       "y": 7840,
@@ -187,7 +187,7 @@
     },
     "Kit2Logo.dc.html": {
       "h": 1000,
-      "title": "After · 02 Logo",
+      "title": "Final · 02 Logo",
       "w": 1600,
       "x": 1840,
       "y": 1420,
@@ -195,7 +195,7 @@
     },
     "Kit2Color.dc.html": {
       "h": 1000,
-      "title": "After · 04 Color",
+      "title": "Final · 04 Color",
       "w": 1600,
       "x": 1360,
       "y": 3440,
@@ -203,7 +203,7 @@
     },
     "Kit2Type.dc.html": {
       "h": 1000,
-      "title": "After · 05 Type",
+      "title": "Final · 05 Type",
       "w": 1600,
       "x": 1360,
       "y": 4860,
@@ -211,7 +211,7 @@
     },
     "Kit2Language.dc.html": {
       "h": 1000,
-      "title": "After · 06 Graphic language",
+      "title": "Final · 06 Graphic language",
       "w": 1600,
       "x": 1680,
       "y": 7840,
@@ -219,7 +219,7 @@
     },
     "Kit2Digital.dc.html": {
       "h": 1000,
-      "title": "After · 07 Digital",
+      "title": "Final · 07 Digital",
       "w": 1600,
       "x": 1680,
       "y": 6280,
@@ -227,7 +227,7 @@
     },
     "Kit2Physical.dc.html": {
       "h": 1000,
-      "title": "After · 08 Print + social",
+      "title": "Final · 08 Print + social",
       "w": 1600,
       "x": 3360,
       "y": 6280,
@@ -259,7 +259,7 @@
     },
     "Kit2LogoUse.dc.html": {
       "h": 1000,
-      "title": "After · 03 Logo use",
+      "title": "Final · 03 Logo use",
       "w": 1600,
       "x": 3520,
       "y": 1420,
@@ -420,7 +420,7 @@
     "p6": {
       "kind": "title1",
       "maxW": 3280,
-      "text": "New in the polished kit",
+      "text": "Also in the final kit",
       "x": 0,
       "y": 7540,
       "w": 240,
@@ -475,7 +475,7 @@
     },
     {
       "id": "polish",
-      "name": "Before and after"
+      "name": "Final kit · before and after"
     }
   ],
   "title": "Megasolar Brand Exploration"

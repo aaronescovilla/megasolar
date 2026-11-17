@@ -1,7 +1,7 @@
-// Exports the polished logo. Run from the repository root: node tools/export2.js
-// Reads tools/symbol2_data.json and tools/wordmark2_data.json, writes brand/logo-v2/*.svg
+// Exports the chosen logo. Run from the repository root: node tools/export2.js
+// Reads tools/symbol2_data.json and tools/wordmark2_data.json, writes brand/logo/*.svg
 const fs = require('fs');
-const OUT = 'brand/logo-v2/';
+const OUT = 'brand/logo/';
 const sym = JSON.parse(fs.readFileSync('tools/symbol2_data.json', 'utf8'));
 const word = JSON.parse(fs.readFileSync('tools/wordmark2_data.json', 'utf8')).word;
 const INK = '#0C1014', SUN = '#FFD12E', WHITE = '#FFFFFF';
