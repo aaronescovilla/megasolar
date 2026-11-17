@@ -1,49 +1,55 @@
-// 02 Logo: approved colorways and what not to do.
+// 02 Logo: the suite. Primary and reversed logos, symbol, stacked logo, icons, clear space and minimum size.
 const L = require('./lib.js');
-const { A, INK, WHITE, SLATE, LINE, TEXT2, MONO } = L;
+const { A, INK, WHITE, PAPER, SLATE, LINE, TEXT2, TEXT3_DARK, TEXT2_DARK, MONO } = L;
 
-const way = (bg, border, logo, name, use) => `<div style="display: flex; flex-direction: column; gap: 12px">
-<div style="height: 270px; box-sizing: border-box; border-radius: 16px; background: ${bg}; border: 1px solid ${border}; display: flex; align-items: center; justify-content: center">${logo}</div>
-<div style="display: flex; flex-direction: column; gap: 2px">
-<div style="font-size: 15px; font-weight: 600">${name}</div>
-<div style="font-size: 13px; line-height: 18px; color: ${SLATE}">${use}</div>
+const tag = (text, color) => `<div style="position: absolute; top: 18px; left: 20px">${L.cap(text, color)}</div>`;
+const note = (text, color) => `<div style="position: absolute; bottom: 18px; left: 20px; right: 20px; font-size: 13px; line-height: 18px; color: ${color}">${text}</div>`;
+const tile = (bg, border, inner, extra = '') => `<div style="position: relative; box-sizing: border-box; border-radius: 20px; background: ${bg}; border: 1px solid ${border}; display: flex; align-items: center; justify-content: center; ${extra}">${inner}</div>`;
+
+// Clear space: one symbol height (x) on every side.
+const CS = 17; // cap height of the logo in the diagram
+const xMark = `<div style="${MONO}; font-size: 11px; color: ${SLATE}">x</div>`;
+const clear = `<div style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+${xMark}
+<div style="display: flex; align-items: center; gap: 6px">
+${xMark}
+<div style="border: 1px dashed #8B949E; padding: ${CS}px; background: #EEF0EB"><div style="display: flex; background: ${WHITE}">${L.lockup(CS, A, INK, { pulse: INK })}</div></div>
+${xMark}
 </div>
+${xMark}
 </div>`;
-
-const NO = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#B42318" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; top: 12px; right: 12px"><circle cx="10" cy="10" r="8"></circle><path d="M4.5 15.5L15.5 4.5"></path></svg>`;
-const dont = (content, text, bg = WHITE) => `<div style="display: flex; flex-direction: column; gap: 10px">
-<div style="position: relative; height: 180px; box-sizing: border-box; border-radius: 14px; background: ${bg}; border: 1px solid ${LINE}; display: flex; align-items: center; justify-content: center; overflow: hidden">${NO}${content}</div>
-<div style="font-size: 13px; line-height: 18px; color: ${TEXT2}">${text}</div>
-</div>`;
-const rule = (lead, text) => `<div style="display: flex; flex-direction: column; gap: 4px"><div style="${MONO}; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: ${SLATE}">${lead}</div><div style="font-size: 14px; line-height: 20px; color: ${TEXT2}">${text}</div></div>`;
-
-const M = 17; // symbol height in the small examples
+const fav = (size, radius, sym) => `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px"><div style="width: ${size}px; height: ${size}px; border-radius: ${radius}px; background: ${INK}; display: flex; align-items: center; justify-content: center">${sym}</div><div style="${MONO}; font-size: 11px; color: ${SLATE}">${size}</div></div>`;
 
 module.exports = () => L.doc({
-  title: 'Megasolar · Logo rules', w: 1600, h: 1000,
+  title: 'Megasolar · Logo', w: 1600, h: 1000,
   body: L.page({
     num: '02', label: 'Logo',
-    body: `<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 14px">
-${L.cap('Colorways', SLATE)}
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
-${way(WHITE, LINE, L.lockup(28, A, INK), 'Primary', 'On white and Paper. Use this first.')}
-${way(INK, INK, L.lockup(28, A, WHITE), 'Reversed', 'On Ink and dark photos.')}
-${way(A, A, L.lockup(28, INK, INK), 'One color, Ink', 'On Solar Yellow, and for one-color print.')}
-${way('#3A424B', '#3A424B', L.lockup(28, WHITE, WHITE), 'One color, white', 'On mid-tone color and busy photos.')}
+    body: `<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+${tile(WHITE, LINE, tag('Primary logo', SLATE) + L.lockup(44, A, INK, { pulse: INK }) + note('Solar Yellow panels, with the pulse and wordmark in Ink.', SLATE))}
+${tile(INK, INK, tag('Reversed', TEXT3_DARK) + L.lockup(44, A, WHITE) + note('Solar Yellow symbol, white wordmark. Use on Ink and dark photos.', TEXT2_DARK))}
 </div>
-${L.cap('Don’t', SLATE, 'margin-top: 18px')}
-<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px">
-${dont(L.lockup(M, A, INK, { w: M * L.LOCK_RATIO, h: 44, stretch: true, decor: true }), 'Don’t stretch or squeeze it.')}
-${dont(L.lockup(M, '#2A78D6', INK, { decor: true }), 'Don’t change the colors.')}
-${dont(L.lockup(M, A, INK, { decor: true, style: 'transform: rotate(-12deg)' }), 'Don’t rotate it.')}
-${dont(L.lockup(M, null, null, { decor: true, outline: INK, sw: 56 }), 'Don’t outline it.')}
-${dont(L.lockup(M, WHITE, WHITE, { decor: true }), 'Don’t put white on Solar Yellow.', A)}
-${dont(L.lockupSwapped(M, A, INK), 'Don’t rearrange the parts.')}
+<div style="flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+${tile(WHITE, LINE, tag('Symbol', SLATE) + L.symbol(112, A, { pulse: INK }) + note('Two leaning panels and a pulse that draws an M.', SLATE))}
+${tile(WHITE, LINE, tag('Stacked', SLATE) + L.stackedLockup(236, A, INK, { pulse: INK }) + note('For square and narrow spaces.', SLATE))}
+${tile(PAPER, LINE, tag('App icon · avatar · favicon', SLATE) + `<div style="display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 8px">
+<div style="display: flex; align-items: center; gap: 18px">
+<div style="width: 104px; height: 104px; border-radius: 24px; background: ${INK}; display: flex; align-items: center; justify-content: center">${L.symbol(46, A)}</div>
+<div style="width: 80px; height: 80px; border-radius: 50%; background: ${A}; display: flex; align-items: center; justify-content: center">${L.symbol(32, INK)}</div>
 </div>
-<div style="margin-top: auto; padding-top: 18px; border-top: 1px solid ${LINE}; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
-${rule('Clear space', 'Keep half the symbol’s height clear on every side.')}
-${rule('Minimum size', 'Symbol at least 20 px tall in the logo, 16 px on its own.')}
-${rule('Small sizes', 'At 32 px and below, use the small-size symbol with the wider cut.')}
+<div style="display: flex; align-items: flex-end; gap: 20px">
+${fav(48, 11, L.symbol(21, A, { small: true }))}
+${fav(32, 8, L.symbol(14, A, { small: true }))}
+${fav(16, 4, L.symbol(7, A, { small: true }))}
+</div>
+</div>`)}
+${tile(WHITE, LINE, tag('Clear space · minimum size', SLATE) + `<div style="display: flex; flex-direction: column; align-items: center; gap: 30px; padding-top: 14px">
+${clear}
+<div style="display: flex; align-items: flex-end; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px">${L.lockup(10, A, INK, { pulse: INK })}<div style="font-size: 12px; color: ${TEXT2}">Logo: letters 10 px tall</div></div>
+<div style="display: flex; flex-direction: column; gap: 8px">${L.symbol(16, INK, { small: true })}<div style="font-size: 12px; color: ${TEXT2}">Symbol: 16 px</div></div>
+</div>
+</div>`)}
 </div>
 </div>`
   })

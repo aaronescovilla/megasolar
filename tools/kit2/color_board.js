@@ -4,8 +4,8 @@ const { INK, WHITE, PAPER, MIST, SLATE, SOLAR, LINE, TEXT2, MONO, GRAPHITE, S, S
 const rgb = (hex) => L.hexRgb(hex).join(' ');
 const ratio = (a, b) => L.contrast(a, b).toFixed(1) + ' : 1';
 
-const panel = (bg, border, name, hex, fg, sub) => `<div style="width: 150px; height: 400px; box-sizing: border-box; border-radius: 16px; background: ${bg}; border: 1px solid ${border}; transform: skewX(-19deg); display: flex; align-items: flex-end; padding: 20px 18px">
-<div style="transform: skewX(19deg); display: flex; flex-direction: column; gap: 4px">
+const panel = (bg, border, name, hex, fg, sub) => `<div style="width: 150px; height: 400px; box-sizing: border-box; border-radius: 16px; background: ${bg}; border: 1px solid ${border}; transform: skewX(-18.4deg); display: flex; align-items: flex-end; padding: 20px 18px">
+<div style="transform: skewX(18.4deg); display: flex; flex-direction: column; gap: 4px">
 <div style="font-size: 16px; font-weight: 600; color: ${fg}">${name}</div>
 <div style="${MONO}; font-size: 12px; color: ${sub}">${hex}</div>
 </div>
@@ -49,7 +49,7 @@ const heatFills = Object.fromEntries(HEAT.map((hex, i) => ['h' + i, hex]));
 module.exports = () => L.doc({
   title: 'Megasolar · Color', w: 1600, h: 1000,
   body: L.page({
-    num: '03', label: 'Color',
+    num: '04', label: 'Color',
     body: `<div style="flex: 1; min-height: 0; display: flex; gap: 56px">
 <div style="width: 600px; flex: none; display: flex; flex-direction: column; gap: 22px">
 ${L.cap('Core', SLATE)}
@@ -66,9 +66,9 @@ ${coreRow(PAPER, LINE, 'Paper', 'Light grounds, documents')}
 <div style="display: flex; flex-direction: column; gap: 10px">
 ${L.cap('Balance', SLATE)}
 <div style="height: 18px; display: flex; gap: 5px; padding: 0 4px">
-<div style="flex: 60; border-radius: 4px; background: ${INK}; transform: skewX(-19deg)"></div>
-<div style="flex: 30; box-sizing: border-box; border-radius: 4px; background: ${WHITE}; border: 1px solid ${LINE}; transform: skewX(-19deg)"></div>
-<div style="flex: 10; border-radius: 4px; background: ${SOLAR}; transform: skewX(-19deg)"></div>
+<div style="flex: 60; border-radius: 4px; background: ${INK}; transform: skewX(-18.4deg)"></div>
+<div style="flex: 30; box-sizing: border-box; border-radius: 4px; background: ${WHITE}; border: 1px solid ${LINE}; transform: skewX(-18.4deg)"></div>
+<div style="flex: 10; border-radius: 4px; background: ${SOLAR}; transform: skewX(-18.4deg)"></div>
 </div>
 <div style="font-size: 13px; color: ${TEXT2}">About 60% Ink, 30% Paper, 10% Solar Yellow. Yellow is a signal, so keep it scarce.</div>
 </div>
@@ -119,7 +119,7 @@ ${tableRow(sq(SERIES.load), 'Load', SERIES.load, 'Site consumption')}
 ${L.cap('Heat ramp for panel maps', SLATE)}
 <div style="display: flex; align-items: center; gap: 28px">
 <div style="display: flex; gap: 4px">
-${HEAT.map((hex) => `<div style="width: 44px; height: 64px; border-radius: 6px; background: ${hex}; transform: skewX(-19deg)"></div>`).join('\n')}
+${HEAT.map((hex) => `<div style="width: 44px; height: 64px; border-radius: 6px; background: ${hex}; transform: skewX(-18.4deg)"></div>`).join('\n')}
 </div>
 <div style="height: 108px; box-sizing: border-box; flex: 1; min-width: 0; border-radius: 12px; background: ${INK}; display: flex; align-items: center; justify-content: center">
 ${L.arraySvg(heat, heatFills)}

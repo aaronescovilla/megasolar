@@ -23,7 +23,7 @@ const rule = (lead, text) => `<div style="display: flex; flex-direction: column;
 module.exports = () => L.doc({
   title: 'Megasolar · Type', w: 1600, h: 1000,
   body: L.page({
-    num: '04', label: 'Type',
+    num: '05', label: 'Type',
     body: `<div style="flex: 1; min-height: 0; display: flex; gap: 64px">
 <div style="width: 560px; flex: none; display: flex; flex-direction: column; gap: 24px">
 <div style="height: 460px; box-sizing: border-box; border-radius: 20px; background: ${INK}; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; color: ${WHITE}">

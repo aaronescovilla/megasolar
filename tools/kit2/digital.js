@@ -24,7 +24,7 @@ const map = L.arrayPaths(11, 6, 15, 20, 3, (c, r) => {
 const heatFills = Object.fromEntries(HEAT.map((hex, i) => ['h' + i, hex]));
 
 const navLink = (t) => `<a href="#" style="height: 44px; display: inline-flex; align-items: center">${t}</a>`;
-const side = (t, active) => `<a href="#" style="height: 44px; box-sizing: border-box; padding: 0 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; font-size: 14px; ${active ? `background: ${WHITE}; border: 1px solid ${MIST}; font-weight: 600; color: ${INK}` : `border: 1px solid transparent; color: ${TEXT2}`}"><span style="width: 7px; height: 14px; border-radius: 2px; background: ${active ? A : 'transparent'}; transform: skewX(-19deg)"></span>${t}</a>`;
+const side = (t, active) => `<a href="#" style="height: 44px; box-sizing: border-box; padding: 0 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; font-size: 14px; ${active ? `background: ${WHITE}; border: 1px solid ${MIST}; font-weight: 600; color: ${INK}` : `border: 1px solid transparent; color: ${TEXT2}`}"><span style="width: 7px; height: 14px; border-radius: 2px; background: ${active ? A : 'transparent'}; transform: skewX(-18.4deg)"></span>${t}</a>`;
 const kpi = (label, value, unit) => `<div style="border-radius: 12px; background: ${PAPER}; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px">
 <div style="font-size: 12px; color: ${SLATE}">${label}</div>
 <div style="${MONO}; font-size: 22px; font-weight: 500; line-height: 28px">${value} <span style="font-size: 12px; color: ${SLATE}">${unit}</span></div>
@@ -39,14 +39,14 @@ const tab = (label, d, active) => `<a href="#" style="flex: 1; height: 60px; dis
 module.exports = () => L.doc({
   title: 'Megasolar · Digital applications', w: 1600, h: 1000,
   body: L.page({
-    num: '06', label: 'Digital', foot: 'Megasolar brand kit v2 · Product screens show sample data',
+    num: '07', label: 'Digital', foot: 'Megasolar brand guidelines · Product screens show sample data',
     body: `<div style="flex: 1; min-height: 0; display: flex; gap: 16px">
 <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 
 <div style="position: relative; overflow: hidden; height: 384px; flex: none; border-radius: 20px; background: ${INK}; color: ${WHITE}; display: flex; flex-direction: column">
 ${L.arraySvg(hero, { dim: '#161C23', lit: A }, { style: 'position: absolute; right: -40px; bottom: 24px' })}
 <div style="position: relative; height: 64px; flex: none; padding: 0 32px; display: flex; align-items: center; gap: 36px">
-${L.lockup(22, A, WHITE)}
+${L.lockup(17, A, WHITE)}
 <nav style="display: flex; gap: 24px; font-size: 14px; color: ${TEXT2_DARK}">${['Platform', 'Solutions', 'Customers', 'Pricing'].map(navLink).join('')}</nav>
 <a href="#" style="margin-left: auto; height: 44px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 10px; background: ${A}; color: ${INK}; font-size: 14px; font-weight: 600">Book a demo</a>
 </div>
@@ -62,7 +62,7 @@ ${L.lockup(22, A, WHITE)}
 
 <div style="height: 384px; flex: none; box-sizing: border-box; border-radius: 20px; background: ${WHITE}; border: 1px solid ${LINE}; overflow: hidden; display: flex; color: ${INK}">
 <div style="width: 196px; flex: none; box-sizing: border-box; padding: 20px 14px; background: ${PAPER}; border-right: 1px solid ${MIST}; display: flex; flex-direction: column; gap: 4px">
-<div style="padding: 4px 2px 16px">${L.lockup(16.5, A, INK)}</div>
+<div style="padding: 4px 2px 16px">${L.lockup(13, A, INK, { pulse: INK })}</div>
 ${side('Overview', true)}
 ${side('Sites')}
 ${side('Alerts')}

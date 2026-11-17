@@ -15,14 +15,15 @@ const crop = (bg, border, sym, name, use) => `<div style="display: flex; flex-di
 </div>`;
 const at = (h, fill, left, top) => L.symbol(h, fill, { style: `position: absolute; left: ${left}px; top: ${top}px` });
 
-// The angle: one panel, a plumb line, the 19° arc, and three things that lean the same way.
+// The lean: one panel, a plumb line, the 1-in-3 slope, and three things that lean the same way.
 const para = (x, y, w, h) => `M${f(x)} ${f(y + h)}L${f(x + w)} ${f(y + h)}L${f(x + w + h * TAN)} ${f(y)}L${f(x + h * TAN)} ${f(y)}Z`;
 const meter = [0, 1, 2, 3, 4].map((i) => `<path d="${para(262 + i * 26, 28, 20, 26)}" fill="${i < 3 ? A : '#2A3440'}"></path>`).join('');
-const angleArt = `<svg width="400" height="220" viewBox="0 0 400 220" role="img" aria-label="A panel leaning 19 degrees from vertical">
+const angleArt = `<svg width="400" height="220" viewBox="0 0 400 220" role="img" aria-label="A panel leaning one across for every three up">
 <path d="${para(64, 24, 104, 172)}" fill="${A}" stroke="${A}" stroke-width="10" stroke-linejoin="round"></path>
 <path d="M59 201V14" fill="none" stroke="${TEXT3_DARK}" stroke-width="1.5" stroke-dasharray="4 5"></path>
-<path d="M59 121A80 80 0 0 1 ${f(59 + 80 * Math.sin(19 * Math.PI / 180))} ${f(201 - 80 * Math.cos(19 * Math.PI / 180))}" fill="none" stroke="${WHITE}" stroke-width="1.5"></path>
-<text x="16" y="112" fill="${WHITE}" style="${MONO}; font-size: 15px; font-weight: 500">19°</text>
+<path d="M59 201V81H99" fill="none" stroke="${WHITE}" stroke-width="1.5" stroke-linejoin="round"></path>
+<text x="38" y="146" fill="${WHITE}" style="${MONO}; font-size: 14px; font-weight: 500">3</text>
+<text x="74" y="72" fill="${WHITE}" style="${MONO}; font-size: 14px; font-weight: 500">1</text>
 ${meter}
 <path d="${para(262, 84, 112, 34)}" fill="none" stroke="${TEXT3_DARK}" stroke-width="1.5" stroke-linejoin="round"></path>
 <path d="M262 196H352L${f(352 + 50 * TAN)} 146H262Z" fill="#2A3440"></path>
@@ -37,7 +38,7 @@ const LOGIC = `class Component extends DCLogic {
     const accent = this.props.accent ?? '#FFD12E';
     const int = (v, lo, hi, d) => { v = Math.round(Number(v)); return Number.isFinite(v) ? Math.max(lo, Math.min(hi, v)) : d; };
     const cols = int(this.props.columns ?? 24, 8, 40, 24), rows = int(this.props.rows ?? 7, 3, 10, 7), days = int(this.props.days ?? 2, 1, 4, 2);
-    const TAN = Math.tan(19 * Math.PI / 180), cw = 12, ch = 22, gap = 4, px = cw + gap, py = ch + gap;
+    const TAN = 1 / 3, cw = 12, ch = 22, gap = 4, px = cw + gap, py = ch + gap;
     const H = rows * py - gap, W = cols * px - gap;
     const f = (n) => Math.round(n * 10) / 10;
     // One hump per day: output rises after sunrise, peaks at noon, falls to zero.
@@ -66,12 +67,12 @@ module.exports = () => L.doc({
   },
   logic: LOGIC,
   body: L.page({
-    num: '05', label: 'Graphic language', dark: true,
+    num: '06', label: 'Graphic language', dark: true,
     body: `<div style="flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 28px">
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
-${card('The angle', 'Every slant leans 19°, the lean of the panels in the symbol. Meters, tags and photo crops all follow it.', angleArt)}
+${card('The lean', 'Every slant leans one across for every three up, like the panels in the symbol. Meters, tags and photo crops follow it.', angleArt)}
 ${card('The array', 'Repeat the panel on a grid to build patterns, meters and charts. Lit cells are Solar Yellow.', L.arraySvg(meters, { dim: '#222A33', lit: A }))}
-${card('The curve', 'The wave in the symbol is a day of output: up after sunrise, down by dusk. Two days draw an M.', `<svg viewBox="{{arr.vb}}" role="img" aria-label="Daily output drawn with panel cells" style="width: 100%; height: 210px"><path d="{{arr.dim}}" fill="#222A33"></path><path d="{{arr.lit}}" fill="${A}"></path><path d="{{arr.curve}}" fill="none" stroke="${WHITE}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path></svg>`)}
+${card('The pulse', 'The line in the symbol is output over a day: up after sunrise, down by dusk. Two days draw an M.', `<svg viewBox="{{arr.vb}}" role="img" aria-label="Daily output drawn with panel cells" style="width: 100%; height: 210px"><path d="{{arr.dim}}" fill="#222A33"></path><path d="{{arr.lit}}" fill="${A}"></path></svg>`)}
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px">
 ${L.cap('Supergraphic crops', TEXT3_DARK)}

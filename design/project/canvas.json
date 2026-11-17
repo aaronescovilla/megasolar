@@ -179,52 +179,115 @@
     },
     "Kit2Overview.dc.html": {
       "h": 1000,
-      "title": "01 · Overview",
+      "title": "After · 01 Overview",
       "w": 1600,
       "x": 0,
-      "y": -10700
+      "y": 7840,
+      "page": "polish"
     },
     "Kit2Logo.dc.html": {
       "h": 1000,
-      "title": "02 · Logo",
+      "title": "After · 02 Logo",
       "w": 1600,
-      "x": 1680,
-      "y": -10700
+      "x": 1840,
+      "y": 1420,
+      "page": "polish"
     },
     "Kit2Color.dc.html": {
       "h": 1000,
-      "title": "03 · Color",
+      "title": "After · 04 Color",
       "w": 1600,
-      "x": 3360,
-      "y": -10700
+      "x": 1360,
+      "y": 3440,
+      "page": "polish"
     },
     "Kit2Type.dc.html": {
       "h": 1000,
-      "title": "04 · Type",
+      "title": "After · 05 Type",
       "w": 1600,
-      "x": 5040,
-      "y": -10700
+      "x": 1360,
+      "y": 4860,
+      "page": "polish"
     },
     "Kit2Language.dc.html": {
       "h": 1000,
-      "title": "05 · Graphic language",
+      "title": "After · 06 Graphic language",
       "w": 1600,
-      "x": 6720,
-      "y": -10700
+      "x": 1680,
+      "y": 7840,
+      "page": "polish"
     },
     "Kit2Digital.dc.html": {
       "h": 1000,
-      "title": "06 · Digital",
+      "title": "After · 07 Digital",
       "w": 1600,
-      "x": 8400,
-      "y": -10700
+      "x": 1680,
+      "y": 6280,
+      "page": "polish"
     },
     "Kit2Physical.dc.html": {
       "h": 1000,
-      "title": "07 · Print + social",
+      "title": "After · 08 Print + social",
       "w": 1600,
-      "x": 10080,
-      "y": -10700
+      "x": 3360,
+      "y": 6280,
+      "page": "polish"
+    },
+    "BeforeAfterLogo.dc.html": {
+      "h": 1000,
+      "title": "Logo · before and after",
+      "w": 1600,
+      "x": 0,
+      "y": 0,
+      "page": "polish"
+    },
+    "BeforeAfterChanges.dc.html": {
+      "h": 1000,
+      "title": "Logo · what changed",
+      "w": 1600,
+      "x": 1680,
+      "y": 0,
+      "page": "polish"
+    },
+    "BeforeLogoSuite.dc.html": {
+      "h": 1600,
+      "title": "Before · Logo suite",
+      "w": 1760,
+      "x": 0,
+      "y": 1420,
+      "page": "polish"
+    },
+    "Kit2LogoUse.dc.html": {
+      "h": 1000,
+      "title": "After · 03 Logo use",
+      "w": 1600,
+      "x": 3520,
+      "y": 1420,
+      "page": "polish"
+    },
+    "BeforeColor.dc.html": {
+      "h": 880,
+      "title": "Before · Color",
+      "w": 1280,
+      "x": 0,
+      "y": 3440,
+      "page": "polish"
+    },
+    "BeforeType.dc.html": {
+      "h": 880,
+      "title": "Before · Type",
+      "w": 1280,
+      "x": 0,
+      "y": 4860,
+      "page": "polish"
+    },
+    "BeforeApplications.dc.html": {
+      "h": 1140,
+      "title": "Before · Applications",
+      "w": 1600,
+      "x": 0,
+      "y": 6280,
+      "page": "polish"
     }
   },
   "createdOnFiles": {
@@ -233,7 +296,8 @@
   },
   "designSystems": [],
   "launch": {
-    "view": "canvas"
+    "view": "canvas",
+    "page": "polish"
   },
   "notes": {
     "t5": {
@@ -308,13 +372,59 @@
       "y": -9540,
       "w": 240
     },
-    "t9": {
+    "p1": {
       "kind": "title1",
-      "maxW": 11680,
-      "text": "Brand kit · v2",
+      "maxW": 3280,
+      "text": "Logo · before and after",
       "x": 0,
-      "y": -11000,
-      "w": 240
+      "y": -300,
+      "w": 240,
+      "page": "polish"
+    },
+    "p2": {
+      "kind": "title1",
+      "maxW": 5120,
+      "text": "Logo suite",
+      "x": 0,
+      "y": 1120,
+      "w": 240,
+      "page": "polish"
+    },
+    "p3": {
+      "kind": "title1",
+      "maxW": 2960,
+      "text": "Color",
+      "x": 0,
+      "y": 3140,
+      "w": 240,
+      "page": "polish"
+    },
+    "p4": {
+      "kind": "title1",
+      "maxW": 2960,
+      "text": "Type",
+      "x": 0,
+      "y": 4560,
+      "w": 240,
+      "page": "polish"
+    },
+    "p5": {
+      "kind": "title1",
+      "maxW": 4960,
+      "text": "Applications",
+      "x": 0,
+      "y": 5980,
+      "w": 240,
+      "page": "polish"
+    },
+    "p6": {
+      "kind": "title1",
+      "maxW": 3280,
+      "text": "New in the polished kit",
+      "x": 0,
+      "y": 7540,
+      "w": 240,
+      "page": "polish"
     }
   },
   "order": [
@@ -349,8 +459,24 @@
     "Kit2Type.dc.html",
     "Kit2Language.dc.html",
     "Kit2Digital.dc.html",
-    "Kit2Physical.dc.html"
+    "Kit2Physical.dc.html",
+    "BeforeAfterLogo.dc.html",
+    "BeforeAfterChanges.dc.html",
+    "BeforeLogoSuite.dc.html",
+    "Kit2LogoUse.dc.html",
+    "BeforeColor.dc.html",
+    "BeforeType.dc.html",
+    "BeforeApplications.dc.html"
   ],
-  "pages": [],
+  "pages": [
+    {
+      "id": "explore",
+      "name": "Exploration"
+    },
+    {
+      "id": "polish",
+      "name": "Before and after"
+    }
+  ],
   "title": "Megasolar Brand Exploration"
 }
