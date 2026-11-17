@@ -9,8 +9,8 @@ The final logo is the wave symbol (two slanted panels cut by an M-shaped wave) w
 | Folder | Contents |
 |---|---|
 | `brand/logo/` | Final logo files. SVG masters for the horizontal, stacked, reversed and one-colour logos, the symbol, the wordmark, the app icon and avatar, plus `favicon.ico`. PNG exports are in `brand/logo/png/`. |
-| `design/project/` | Source of the design canvas: 25 boards (`*.dc.html`) and their layout (`canvas.json`). |
-| `tools/` | Scripts that generate the Saira wordmark outlines, the logo files and six of the boards. |
+| `design/project/` | Source of the design canvas: 32 boards (`*.dc.html`) and their layout (`canvas.json`). |
+| `tools/` | Scripts that generate the Saira wordmark outlines, the logo files and 13 of the boards. `tools/kit2/` builds the v2 brand kit. |
 
 ## The design canvas
 
@@ -21,7 +21,8 @@ Rows on the canvas, newest first:
 
 | Row | Boards |
 |---|---|
-| Brand kit · final | `KitColor`, `KitType`, `KitApplications` |
+| Brand kit · v2 | `Kit2Overview`, `Kit2Logo`, `Kit2Color`, `Kit2Type`, `Kit2Language`, `Kit2Digital`, `Kit2Physical` |
+| Brand kit · v1 | `KitColor`, `KitType`, `KitApplications` |
 | Saira refinements and logo suite | `SairaRefinements` (41–52), `SairaSuite` (final suite, 42 Tuned) |
 | Wordmark rounds 3 and 4 | `WordmarksTech` (21–32), `WordmarksTesla` (33–40) |
 | Wordmark and logo suite | `WordmarkOptions` (1–6), `WordmarksExtended` (7–12), `WordmarkIdeas` (13–20), `LogoSuite` |
@@ -47,9 +48,10 @@ node tools/raster.js                # writes brand/logo/png/*.png (needs the pla
 node tools/saira_gen.js             # SairaRefinements, SairaSuite
 node tools/kit_gen.js               # KitColor, KitType, KitApplications
 node tools/tesla_gen.js             # WordmarksTesla
+node tools/kit2/build.js            # the seven Kit2 boards (v2 brand kit)
 ```
 
-Each generator takes an optional output folder, for example `node tools/kit_gen.js /tmp/out/`, to build without overwriting. The `*_t.js` scripts run a board's logic with every tweak setting and report missing values.
+Each generator takes an optional output folder, for example `node tools/kit_gen.js /tmp/out/`, to build without overwriting. The `*_t.js` scripts and `tools/kit2/check.js` run a board's logic with different tweak settings and report missing values.
 
 `tools/saira_data.json` is committed, so steps 2 and 3 work without Python.
 

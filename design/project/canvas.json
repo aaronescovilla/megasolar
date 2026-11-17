@@ -176,6 +176,55 @@
       "w": 1600,
       "x": 2720,
       "y": -9240
+    },
+    "Kit2Overview.dc.html": {
+      "h": 1000,
+      "title": "01 · Overview",
+      "w": 1600,
+      "x": 0,
+      "y": -10700
+    },
+    "Kit2Logo.dc.html": {
+      "h": 1000,
+      "title": "02 · Logo",
+      "w": 1600,
+      "x": 1680,
+      "y": -10700
+    },
+    "Kit2Color.dc.html": {
+      "h": 1000,
+      "title": "03 · Color",
+      "w": 1600,
+      "x": 3360,
+      "y": -10700
+    },
+    "Kit2Type.dc.html": {
+      "h": 1000,
+      "title": "04 · Type",
+      "w": 1600,
+      "x": 5040,
+      "y": -10700
+    },
+    "Kit2Language.dc.html": {
+      "h": 1000,
+      "title": "05 · Graphic language",
+      "w": 1600,
+      "x": 6720,
+      "y": -10700
+    },
+    "Kit2Digital.dc.html": {
+      "h": 1000,
+      "title": "06 · Digital",
+      "w": 1600,
+      "x": 8400,
+      "y": -10700
+    },
+    "Kit2Physical.dc.html": {
+      "h": 1000,
+      "title": "07 · Print + social",
+      "w": 1600,
+      "x": 10080,
+      "y": -10700
     }
   },
   "createdOnFiles": {
@@ -254,9 +303,17 @@
     "t8": {
       "kind": "title1",
       "maxW": 4320,
-      "text": "Brand kit · final",
+      "text": "Brand kit · v1",
       "x": 0,
       "y": -9540,
+      "w": 240
+    },
+    "t9": {
+      "kind": "title1",
+      "maxW": 11680,
+      "text": "Brand kit · v2",
+      "x": 0,
+      "y": -11000,
       "w": 240
     }
   },
@@ -285,7 +342,14 @@
     "SairaSuite.dc.html",
     "KitColor.dc.html",
     "KitType.dc.html",
-    "KitApplications.dc.html"
+    "KitApplications.dc.html",
+    "Kit2Overview.dc.html",
+    "Kit2Logo.dc.html",
+    "Kit2Color.dc.html",
+    "Kit2Type.dc.html",
+    "Kit2Language.dc.html",
+    "Kit2Digital.dc.html",
+    "Kit2Physical.dc.html"
   ],
   "pages": [],
   "title": "Megasolar Brand Exploration"
